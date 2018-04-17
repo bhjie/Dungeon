@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CenterSysTrigger : MonoBehaviour {
+public class Bridge2ndTriggerA : MonoBehaviour {
 
 	void Start () {
 		
 	}
-
+	
 	void Update () {
 		
 	}
@@ -16,8 +16,8 @@ public class CenterSysTrigger : MonoBehaviour {
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            RotatingOrb.count++;
-            RotatingOrb.RotateController = true;
+            Bridge2ndController.state = 1;
+            Bridge2ndController.RotateController = true;
         }
     }
 }
