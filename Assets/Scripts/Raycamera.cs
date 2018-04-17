@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Raycamera : MonoBehaviour {
     private GameObject Player;
-    private int flag = 0;
     public float smoothing = 5f;
     public float dis;
     Vector3 targetCamPos;
