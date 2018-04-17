@@ -12,7 +12,7 @@ public class CenterSys2nd : MonoBehaviour {
 
     private void Start()
     {
-        count = 1;
+        count = 2;
     }
 
     void Update()

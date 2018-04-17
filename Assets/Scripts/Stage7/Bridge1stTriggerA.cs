@@ -41,6 +41,12 @@ public class Bridge1stTriggerA : MonoBehaviour {
             Bridge1stController.RotateController = true;
             Bridge1stEndController.state = 0;
             Bridge1stEndController.RotateController = true;
+
+            Bridge2ndTriggerA.working = 0;
+            Bridge2ndController.state = 0;
+            Bridge2ndController.RotateController = true;
+            Bridge2ndEndController.state = 1;
+            Bridge2ndEndController.RotateController = true;
         }
     }
 }

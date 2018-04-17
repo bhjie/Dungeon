@@ -115,6 +115,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            if (other.relativeVelocity.y > 10.5f || other.relativeVelocity.y < -10.5f)
+            {
+                PlayerDie();
+            }
+        }
         if (other.gameObject.CompareTag("GameOver"))
         {
             PlayerDie();
