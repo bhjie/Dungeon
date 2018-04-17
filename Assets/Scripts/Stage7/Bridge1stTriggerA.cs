@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bridge2ndTriggerA : MonoBehaviour {
+public class Bridge1stTriggerA : MonoBehaviour {
 
     private Vector3 offset;
     public static int working;
     private float oriY;
 
-    void Start () {
+    void Start()
+    {
         offset = new Vector3(0, 0.1f, 0f);
         working = 0;
         transform.position += offset;
         oriY = transform.position.y;
     }
-	
-	void Update () {
+
+    void Update()
+    {
         if (working == 1)
         {
             transform.position = Vector3.Lerp(transform.position, transform.position - offset, 1f * Time.deltaTime);
@@ -24,7 +26,7 @@ public class Bridge2ndTriggerA : MonoBehaviour {
         {
             working = 2;
         }
-        if(working == 0 && transform.position.y < oriY)
+        if (working == 0 && transform.position.y < oriY)
         {
             transform.position = Vector3.Lerp(transform.position, transform.position + offset, 1f * Time.deltaTime);
         }
@@ -32,13 +34,13 @@ public class Bridge2ndTriggerA : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(working == 0 && collision.gameObject.CompareTag("Player"))
+        if (working == 0 && collision.gameObject.CompareTag("Player"))
         {
             working = 1;
-            Bridge2ndController.state = 1;
-            Bridge2ndController.RotateController = true;
-            Bridge2ndEndController.state = 0;
-            Bridge2ndEndController.RotateController = true;
+            Bridge1stController.state = -1;
+            Bridge1stController.RotateController = true;
+            Bridge1stEndController.state = 0;
+            Bridge1stEndController.RotateController = true;
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bridge2ndController : MonoBehaviour {
+public class Bridge5thController : MonoBehaviour {
 
     private float origionZ;
     public static int state;  //0表示平行，1上仰，-1下俯
@@ -10,15 +10,15 @@ public class Bridge2ndController : MonoBehaviour {
     private Quaternion targetRotation;    //声明旋转目标角度
     public static float RotateAngle = 20;       //定义每次旋转的角度
 
-    void Start ()
+    void Start()
     {
         state = 0;
         origionZ = transform.rotation.z;
-	}
-	
-	void Update ()
+    }
+
+    void Update()
     {
-		if(RotateController)
+        if (RotateController)
         {
             targetRotation = Quaternion.Euler(0, 0, RotateAngle * state + origionZ) * Quaternion.identity;
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 1.2f);
@@ -29,5 +29,5 @@ public class Bridge2ndController : MonoBehaviour {
                 RotateController = false;
             }
         }
-	}
+    }
 }
