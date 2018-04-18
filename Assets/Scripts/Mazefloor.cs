@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mazefloor : MonoBehaviour {
 
     public GameObject[] movefloor;
-    public float delay=1f;
+    public float delay=0.5f;
     public Vector3 start;
     Vector3 swap;
     private int appear = 0;     //接触这个平面的时候将变为活动状态，离开时变为静止状态
@@ -79,7 +79,7 @@ public class Mazefloor : MonoBehaviour {
     }
     IEnumerator MyMethod()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(delay);
         if (locking == 1 && appear == 0)
         {
             Landed();
