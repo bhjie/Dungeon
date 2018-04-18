@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bridge1stController : MonoBehaviour {
+public class Bridge7thController : MonoBehaviour {
 
     public static int state;  //0表示平行，1上仰，-1下俯
     public static bool RotateController;
@@ -18,7 +18,7 @@ public class Bridge1stController : MonoBehaviour {
     {
         if (RotateController)
         {
-            targetRotation = Quaternion.Euler(0, 0, RotateAngle * state) * Quaternion.identity;
+            targetRotation = Quaternion.Euler(0, -180, RotateAngle * state) * Quaternion.identity;
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 1.2f);
 
             if (Quaternion.Angle(targetRotation, transform.rotation) < 0.1f)

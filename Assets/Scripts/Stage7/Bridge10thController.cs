@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bridge1stController : MonoBehaviour {
+public class Bridge10thController : MonoBehaviour {
 
     public static int state;  //0表示平行，1上仰，-1下俯
     public static bool RotateController;
