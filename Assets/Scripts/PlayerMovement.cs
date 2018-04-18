@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        HealthManage.LiveOrNot = true;
         GroundType = 0;
         movement = new Vector3(0f, 0f, 0f); 
         rg3d = GetComponent<Rigidbody>();
@@ -160,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             ItemManage.PassOrReStart = false;
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         }
-        HealthManage.LiveOrNot = true;
+        
     }
 
 }

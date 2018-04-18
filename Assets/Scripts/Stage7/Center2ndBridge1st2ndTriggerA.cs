@@ -7,14 +7,13 @@ public class Center2ndBridge1st2ndTriggerA : MonoBehaviour {
     private Vector3 offset;
     private int working;
     private float oriY;
-    private bool bridge1ststate;
+
     void Start()
     {
         offset = new Vector3(0, 0.1f, 0f);
         working = 0;
         transform.position += offset;
         oriY = transform.position.y;
-        bridge1ststate = true;
     }
 
     void Update()
@@ -44,7 +43,7 @@ public class Center2ndBridge1st2ndTriggerA : MonoBehaviour {
             working = 1;
             CenterSys2nd.count++;
             CenterSys2nd.RotateController = true;
-            if(bridge1ststate)
+            if(Bridge2ndController.state == 1)
             {
                 Bridge1stTriggerA.working = 1;
                 Bridge1stController.state = -1;
@@ -58,7 +57,6 @@ public class Center2ndBridge1st2ndTriggerA : MonoBehaviour {
                 Bridge2ndEndController.state = 1;
                 Bridge2ndEndController.RotateController = true;
 
-                bridge1ststate = false;
             }
             else
             {
@@ -74,7 +72,6 @@ public class Center2ndBridge1st2ndTriggerA : MonoBehaviour {
                 Bridge1stEndController.state = -1;
                 Bridge1stEndController.RotateController = true;
 
-                bridge1ststate = true;
             }
         }
     }
