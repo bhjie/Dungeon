@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CenterSysAllTriger : MonoBehaviour {
+public class CenterSysAllLowTrigger : MonoBehaviour {
 
     private Vector3 offset;
     private int working;

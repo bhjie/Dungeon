@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CenterSys7th : MonoBehaviour {
+public class Bridge14thController : MonoBehaviour {
 
+    public static int state;  //0表示平行，1上仰，-1下俯
+    public static bool RotateController;
     private Quaternion targetRotation;
-    public float RotateAngle = 90;
-    public static int count;
-    public static bool RotateController = false;
+    public static float RotateAngle = 20;
 
-    private void Start()
+    void Start()
     {
-        count = 0;
+        state = 1;
     }
 
     void Update()
     {
         if (RotateController)
         {
-            targetRotation = Quaternion.Euler(0, RotateAngle * count, 0) * Quaternion.identity;
+            targetRotation = Quaternion.Euler(0, 0, RotateAngle * state) * Quaternion.identity;
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 1.2f);
 
             if (Quaternion.Angle(targetRotation, transform.rotation) < 0.1f)
