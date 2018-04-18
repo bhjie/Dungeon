@@ -42,6 +42,8 @@ public class CenterSys4thTrigger : MonoBehaviour {
             working = 1;
             CenterSys4th.count++;
             CenterSys4th.RotateController = true;
+            CenterSys8th.count++;
+            CenterSys8th.RotateController = true;
         }
     }
 }

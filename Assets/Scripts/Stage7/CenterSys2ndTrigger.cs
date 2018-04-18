@@ -42,6 +42,8 @@ public class CenterSys2ndTrigger : MonoBehaviour {
             working = 1;
             CenterSys2nd.count++;
             CenterSys2nd.RotateController = true;
+            CenterSys6th.count++;
+            CenterSys6th.RotateController = true;
         }
     }
 }

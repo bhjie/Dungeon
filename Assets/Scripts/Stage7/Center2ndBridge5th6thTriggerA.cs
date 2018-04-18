@@ -43,7 +43,24 @@ public class Center2ndBridge5th6thTriggerA : MonoBehaviour {
             working = 1;
             CenterSys2nd.count++;
             CenterSys2nd.RotateController = true;
-            if (Bridge5thController.state == 1)
+            CenterSys6th.count++;
+            CenterSys6th.RotateController = true;
+            if (Bridge5thController.state == 0)
+            {
+                
+                Bridge5thTriggerA.working = 1;
+                Bridge5thController.state = -1;
+                Bridge5thController.RotateController = true;
+                Bridge5thEndController.state = 0;
+                Bridge5thEndController.RotateController = true;
+
+                Bridge6thTriggerA.working = 0;
+                Bridge6thController.state = 0;
+                Bridge6thController.RotateController = true;
+                Bridge6thEndController.state = 1;
+                Bridge6thEndController.RotateController = true;
+            }
+            else
             {
                 Bridge6thTriggerA.working = 1;
                 Bridge6thController.state = 1;
@@ -56,22 +73,7 @@ public class Center2ndBridge5th6thTriggerA : MonoBehaviour {
                 Bridge5thController.RotateController = true;
                 Bridge5thEndController.state = -1;
                 Bridge5thEndController.RotateController = true;
-                
 
-            }
-            else
-            {
-                Bridge5thTriggerA.working = 1;
-                Bridge5thController.state = -1;
-                Bridge5thController.RotateController = true;
-                Bridge5thEndController.state = 0;
-                Bridge5thEndController.RotateController = true;
-
-                Bridge6thTriggerA.working = 0;
-                Bridge6thController.state = 0;
-                Bridge6thController.RotateController = true;
-                Bridge6thEndController.state = 1;
-                Bridge6thEndController.RotateController = true;
 
             }
         }

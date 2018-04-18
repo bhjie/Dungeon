@@ -42,6 +42,8 @@ public class CenterSys3rdTrigger : MonoBehaviour {
             working = 1;
             CenterSys3rd.count++;
             CenterSys3rd.RotateController = true;
+            CenterSys7th.count++;
+            CenterSys7th.RotateController = true;
         }
     }
 }

@@ -43,7 +43,9 @@ public class Center2ndBridge1st2ndTriggerA : MonoBehaviour {
             working = 1;
             CenterSys2nd.count++;
             CenterSys2nd.RotateController = true;
-            if(Bridge2ndController.state == 1)
+            CenterSys6th.count++;
+            CenterSys6th.RotateController = true;
+            if (Bridge2ndController.state == 1)
             {
                 Bridge1stTriggerA.working = 1;
                 Bridge1stController.state = -1;

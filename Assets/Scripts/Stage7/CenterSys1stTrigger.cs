@@ -40,6 +40,8 @@ public class CenterSys1stTrigger : MonoBehaviour {
             working = 1;
             CenterSys1st.count++;
             CenterSys1st.RotateController = true;
+            CenterSys5th.count++;
+            CenterSys5th.RotateController = true;
         }
     }
 }
