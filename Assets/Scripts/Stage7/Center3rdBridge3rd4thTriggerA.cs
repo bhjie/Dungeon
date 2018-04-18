@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bridge3rd4th5th6thTriggerA : MonoBehaviour {
+public class Center3rdBridge3rd4thTriggerA : MonoBehaviour {
 
     private Vector3 offset;
     private int working;
@@ -41,6 +41,8 @@ public class Bridge3rd4th5th6thTriggerA : MonoBehaviour {
         if (working == 0 && collision.gameObject.CompareTag("Player"))
         {
             working = 1;
+            CenterSys3rd.count++;
+            CenterSys3rd.RotateController = true;
             if (Bridge4thController.state == 1)
             {
                 Bridge3rdTriggerA.working = 1;
@@ -69,36 +71,6 @@ public class Bridge3rd4th5th6thTriggerA : MonoBehaviour {
                 Bridge3rdController.RotateController = true;
                 Bridge3rdEndController.state = -1;
                 Bridge3rdEndController.RotateController = true;
-
-            }
-            if (Bridge6thController.state == 1)
-            {
-                Bridge5thTriggerA.working = 1;
-                Bridge5thController.state = -1;
-                Bridge5thController.RotateController = true;
-                Bridge5thEndController.state = 0;
-                Bridge5thEndController.RotateController = true;
-
-                Bridge6thTriggerA.working = 0;
-                Bridge6thController.state = 0;
-                Bridge6thController.RotateController = true;
-                Bridge6thEndController.state = 1;
-                Bridge6thEndController.RotateController = true;
-
-            }
-            else
-            {
-                Bridge6thTriggerA.working = 1;
-                Bridge6thController.state = 1;
-                Bridge6thController.RotateController = true;
-                Bridge6thEndController.state = 0;
-                Bridge6thEndController.RotateController = true;
-
-                Bridge5thTriggerA.working = 0;
-                Bridge5thController.state = 0;
-                Bridge5thController.RotateController = true;
-                Bridge5thEndController.state = -1;
-                Bridge5thEndController.RotateController = true;
 
             }
         }

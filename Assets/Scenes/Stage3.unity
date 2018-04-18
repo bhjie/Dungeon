@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6770876, g: 0.73447907, b: 0.8047757, a: 1}
+  m_IndirectSpecularColor: {r: 0.45082098, g: 0.5007414, b: 0.5746938, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: f84b465fbc9d8a64f8301a3adda52a4c,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -221,6 +222,7 @@ MonoBehaviour:
   targetpos: {x: 2, y: 0.5, z: 2}
   startpos: {x: 2, y: 5, z: 2}
   smoothing: 2
+  scriptlock: 0
 --- !u!4 &108645315 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4556385269648830, guid: 963b017e5e4782f49ad41711f4427ec7,
@@ -523,6 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothing: 5
+  offset: {x: -0.8, y: 9, z: -5}
 --- !u!1 &292245353
 GameObject:
   m_ObjectHideFlags: 0

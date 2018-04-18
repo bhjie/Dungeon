@@ -12,14 +12,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rg3d;
     private Vector3 movement;
     private int GroundType;
-    private float DieY;
     //private ConstantForce constantforce;
 
 
     void Start()
     {
-        GameObject gameoverGround = GameObject.Find("GameOver");
-        DieY = gameoverGround.transform.position.y;
+        HealthManage.LiveOrNot = true;
         GroundType = 0;
         movement = new Vector3(0f, 0f, 0f); 
         rg3d = GetComponent<Rigidbody>();
@@ -71,11 +69,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 rg3d.velocity = new Vector3(rg3d.velocity.x, jumpspeed, rg3d.velocity.z);
             }
-        }
-
-        if (transform.position.y < DieY)
-        {
-            PlayerDie();
         }
     }
 
@@ -168,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             ItemManage.PassOrReStart = false;
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         }
-        HealthManage.LiveOrNot = true;
+        
     }
 
 }
