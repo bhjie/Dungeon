@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Center3rdBridge3rd4thTriggerA : MonoBehaviour {
+public class Center3rdBridge9th10thTriggerA : MonoBehaviour {
 
     private Vector3 offset;
     private int working;
@@ -45,34 +45,34 @@ public class Center3rdBridge3rd4thTriggerA : MonoBehaviour {
             CenterSys3rd.RotateController = true;
             CenterSys7th.count++;
             CenterSys7th.RotateController = true;
-            if (Bridge4thController.state == 1)
+            if (Bridge10thController.state == 1)
             {
-                Bridge3rdTriggerA.working = 1;
-                Bridge3rdController.state = -1;
-                Bridge3rdController.RotateController = true;
-                Bridge3rdEndController.state = 0;
-                Bridge3rdEndController.RotateController = true;
+                Bridge9thTriggerA.working = 1;
+                Bridge9thController.state = -1;
+                Bridge9thController.RotateController = true;
+                Bridge9thEndController.state = 0;
+                Bridge9thEndController.RotateController = true;
 
-                Bridge4thTriggerA.working = 0;
-                Bridge4thController.state = 0;
-                Bridge4thController.RotateController = true;
-                Bridge4thEndController.state = 1;
-                Bridge4thEndController.RotateController = true;
+                Bridge10thTriggerA.working = 0;
+                Bridge10thController.state = 0;
+                Bridge10thController.RotateController = true;
+                Bridge10thEndController.state = 1;
+                Bridge10thEndController.RotateController = true;
 
             }
             else
             {
-                Bridge4thTriggerA.working = 1;
-                Bridge4thController.state = 1;
-                Bridge4thController.RotateController = true;
-                Bridge4thEndController.state = 0;
-                Bridge4thEndController.RotateController = true;
+                Bridge10thTriggerA.working = 1;
+                Bridge10thController.state = 1;
+                Bridge10thController.RotateController = true;
+                Bridge10thEndController.state = 0;
+                Bridge10thEndController.RotateController = true;
 
-                Bridge3rdTriggerA.working = 0;
-                Bridge3rdController.state = 0;
-                Bridge3rdController.RotateController = true;
-                Bridge3rdEndController.state = -1;
-                Bridge3rdEndController.RotateController = true;
+                Bridge9thTriggerA.working = 0;
+                Bridge9thController.state = 0;
+                Bridge9thController.RotateController = true;
+                Bridge9thEndController.state = -1;
+                Bridge9thEndController.RotateController = true;
 
             }
         }

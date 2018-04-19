@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CenterSys4thTrigger : MonoBehaviour {
+public class CenterSysAllLowTrigger : MonoBehaviour {
 
     private Vector3 offset;
     private int working;
     private float oriY;
+
     void Start()
     {
         offset = new Vector3(0, 0.1f, 0f);
@@ -40,10 +41,14 @@ public class CenterSys4thTrigger : MonoBehaviour {
         if (working == 0 && collision.gameObject.CompareTag("Player"))
         {
             working = 1;
+            CenterSys1st.count++;
+            CenterSys1st.RotateController = true;
+            CenterSys2nd.count++;
+            CenterSys2nd.RotateController = true;
+            CenterSys3rd.count++;
+            CenterSys3rd.RotateController = true;
             CenterSys4th.count++;
             CenterSys4th.RotateController = true;
-            CenterSys8th.count++;
-            CenterSys8th.RotateController = true;
         }
     }
 }

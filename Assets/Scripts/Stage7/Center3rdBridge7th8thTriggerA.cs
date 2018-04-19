@@ -43,6 +43,8 @@ public class Center3rdBridge7th8thTriggerA : MonoBehaviour {
             working = 1;
             CenterSys3rd.count++;
             CenterSys3rd.RotateController = true;
+            CenterSys7th.count++;
+            CenterSys7th.RotateController = true;
             if (Bridge8thController.state == 1)
             {
                 Bridge7thTriggerA.working = 1;

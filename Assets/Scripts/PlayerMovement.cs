@@ -9,10 +9,11 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed;
     public float jumpspeed;
-    private Rigidbody rg3d;
+    private static Rigidbody rg3d;
     private Vector3 movement;
     private int GroundType;
-    //private ConstantForce constantforce;
+    static Vector3 FrozenSpeed;
+    static Vector3 FrozenAngularSpeed;
 
 
     void Start()
@@ -21,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
         GroundType = 0;
         movement = new Vector3(0f, 0f, 0f); 
         rg3d = GetComponent<Rigidbody>();
-        //constantforce = GetComponent<ConstantForce>();
     }
 
 
@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(HealthManage.LiveOrNot)
         {
-            tag = null;
+            tag = "GameOver";
             HealthManage.LiveOrNot = false;
             HealthManage.PlayerHealth--;
             StartCoroutine(ReloadScene());
@@ -148,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
         Animator anim;
         anim = gameoverUI.GetComponent<Animator>();
         anim.SetTrigger("GameOverTrigger");
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.5f);
         anim.SetTrigger("GameOverTrigger");
         yield return new WaitForSeconds(1.0f);
         if (HealthManage.PlayerHealth == 0)
@@ -164,4 +164,18 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    public static void FreezePlayer()
+    {
+        FrozenAngularSpeed = rg3d.angularVelocity;
+        FrozenSpeed = rg3d.velocity;
+        rg3d.constraints = RigidbodyConstraints.FreezeAll;
+        
+    }
+
+    public static void UnFreezePlayer()
+    {
+        rg3d.constraints = RigidbodyConstraints.None;
+        rg3d.velocity = FrozenSpeed;
+        rg3d.angularVelocity = FrozenAngularSpeed;
+    }
 }

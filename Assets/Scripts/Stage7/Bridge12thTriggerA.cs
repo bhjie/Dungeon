@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CenterSys4thTrigger : MonoBehaviour {
+public class Bridge12thTriggerA : MonoBehaviour {
 
     private Vector3 offset;
-    private int working;
+    public static int working;
     private float oriY;
+
     void Start()
     {
         offset = new Vector3(0, 0.1f, 0f);
@@ -25,13 +26,9 @@ public class CenterSys4thTrigger : MonoBehaviour {
         {
             working = 2;
         }
-        if (working == 2)
+        if (working == 0 && transform.position.y < oriY)
         {
             transform.position = Vector3.Lerp(transform.position, transform.position + offset, 1f * Time.deltaTime);
-        }
-        if (working == 2 && transform.position.y > oriY)
-        {
-            working = 0;
         }
     }
 
@@ -40,10 +37,10 @@ public class CenterSys4thTrigger : MonoBehaviour {
         if (working == 0 && collision.gameObject.CompareTag("Player"))
         {
             working = 1;
-            CenterSys4th.count++;
-            CenterSys4th.RotateController = true;
-            CenterSys8th.count++;
-            CenterSys8th.RotateController = true;
+            Bridge12thController.state = 0;
+            Bridge12thController.RotateController = true;
+            Bridge12thEndController.state = 0;
+            Bridge12thEndController.RotateController = true;
         }
     }
 }
