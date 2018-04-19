@@ -176,7 +176,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
       propertyPath: m_Name
-      value: Floor (7)
+      value: elevator
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
@@ -269,7 +269,6 @@ MonoBehaviour:
   - {fileID: 1576964962}
   - {fileID: 1357206449}
   delay: 2
-  start: {x: 20, y: 0, z: -10}
 --- !u!114 &16674232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +570,6 @@ MonoBehaviour:
   - {fileID: 1303673173}
   - {fileID: 988892671}
   delay: 0.5
-  start: {x: -20, y: 0, z: 5}
 --- !u!4 &62542355 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -599,7 +597,6 @@ MonoBehaviour:
   - {fileID: 307296157}
   - {fileID: 324953032}
   delay: 2
-  start: {x: -15, y: 0, z: -5}
 --- !u!114 &70481502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,7 +768,6 @@ MonoBehaviour:
   - {fileID: 16674230}
   - {fileID: 1457541015}
   delay: 0.5
-  start: {x: 20, y: 0, z: -15}
 --- !u!114 &78454863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,7 +873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 10, y: 25, z: -10}
+  start: {x: 10, y: 35, z: -10}
   target: {x: 10, y: 20, z: -10}
   smoothing: 5
 --- !u!114 &113562776
@@ -895,7 +891,6 @@ MonoBehaviour:
   - {fileID: 838976513}
   - {fileID: 733892532}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &140474777 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -1004,7 +999,6 @@ MonoBehaviour:
   - {fileID: 2138338405}
   - {fileID: 1664782890}
   delay: 0.5
-  start: {x: -5, y: 0, z: 10}
 --- !u!1001 &194036648
 Prefab:
   m_ObjectHideFlags: 0
@@ -1090,7 +1084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 15, y: 25, z: 0}
+  start: {x: 15, y: 35, z: 0}
   target: {x: 15, y: 20, z: 0}
   smoothing: 5
 --- !u!114 &194036652
@@ -1108,7 +1102,6 @@ MonoBehaviour:
   - {fileID: 524787363}
   - {fileID: 1043097133}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &196618537 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -1195,7 +1188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: -20, y: 0, z: -5}
 --- !u!114 &223770274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,7 +1299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: -15, y: 0, z: 10}
 --- !u!4 &232363265 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -1496,7 +1487,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &269614931 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -1651,7 +1641,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 15, y: 0, z: -10}
 --- !u!114 &271582606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1729,6 +1718,56 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &283111030
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 441993709}
+    m_Modifications:
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533077639699988, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a7550183fd46515488e41e8e8b98a8d7, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &285022102
 Prefab:
@@ -1813,7 +1852,6 @@ MonoBehaviour:
   - {fileID: 1107927549}
   - {fileID: 1440906888}
   delay: 0.5
-  start: {x: 5, y: 0, z: -10}
 --- !u!114 &293019744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1954,7 +1992,6 @@ MonoBehaviour:
   - {fileID: 223770272}
   - {fileID: 1162102506}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!114 &307296159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2055,7 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -20, y: 25, z: 15}
+  start: {x: -20, y: 35, z: 15}
   target: {x: -20, y: 20, z: 15}
   smoothing: 5
 --- !u!114 &307509087
@@ -2073,7 +2110,6 @@ MonoBehaviour:
   - {fileID: 840180211}
   - {fileID: 1866589868}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &319550460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,7 +2231,6 @@ MonoBehaviour:
   - {fileID: 1142208473}
   - {fileID: 785366083}
   delay: 2
-  start: {x: -10, y: 0, z: -10}
 --- !u!4 &347658108 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -2273,7 +2308,6 @@ MonoBehaviour:
   - {fileID: 697207665}
   - {fileID: 2028457369}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &403250099
 Prefab:
   m_ObjectHideFlags: 0
@@ -2356,7 +2390,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 2027640818}
   delay: 0.5
-  start: {x: -10, y: 0, z: -20}
 --- !u!114 &403250102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2525,7 +2558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -10, y: 25, z: -10}
+  start: {x: -10, y: 35, z: -10}
   target: {x: -10, y: 20, z: -10}
   smoothing: 5
 --- !u!114 &418691839
@@ -2539,9 +2572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68689d5d4ea986c4994accf2ea4aec48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movefloor: []
-  delay: 1
-  start: {x: 0, y: 0, z: 0}
+  movefloor:
+  - {fileID: 324953032}
+  delay: 2
 --- !u!1001 &426849968
 Prefab:
   m_ObjectHideFlags: 0
@@ -2627,7 +2660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 10, y: 25, z: -15}
+  start: {x: 10, y: 35, z: -15}
   target: {x: 10, y: 20, z: -15}
   smoothing: 5
 --- !u!114 &426849972
@@ -2645,7 +2678,6 @@ MonoBehaviour:
   - {fileID: 113562774}
   - {fileID: 562698594}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &441993708
 Prefab:
   m_ObjectHideFlags: 0
@@ -2731,7 +2763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 5, y: 25, z: 5}
+  start: {x: 5, y: 35, z: 5}
   target: {x: 5, y: 20, z: 5}
   smoothing: 5
 --- !u!114 &441993712
@@ -2745,9 +2777,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68689d5d4ea986c4994accf2ea4aec48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movefloor: []
+  movefloor:
+  - {fileID: 1841953519}
+  - {fileID: 736353614}
   delay: 1
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &442414142 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -2766,7 +2799,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 1
-  start: {x: -5, y: 0, z: -10}
 --- !u!114 &442414147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2822,7 +2854,6 @@ MonoBehaviour:
   - {fileID: 1670974539}
   - {fileID: 814305798}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &470871441
 Prefab:
   m_ObjectHideFlags: 0
@@ -2908,7 +2939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 0, y: 25, z: 0}
+  start: {x: 0, y: 35, z: 0}
   target: {x: 0, y: 20, z: 0}
   smoothing: 5
 --- !u!114 &470871445
@@ -2928,7 +2959,6 @@ MonoBehaviour:
   - {fileID: 1320063496}
   - {fileID: 1841953519}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &498987619 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -2964,7 +2994,6 @@ MonoBehaviour:
   - {fileID: 1991719603}
   - {fileID: 2138338405}
   delay: 2
-  start: {x: -10, y: 0, z: 20}
 --- !u!1001 &524787361
 Prefab:
   m_ObjectHideFlags: 0
@@ -3050,7 +3079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 10, y: 25, z: 0}
+  start: {x: 10, y: 35, z: 0}
   target: {x: 10, y: 20, z: 0}
   smoothing: 5
 --- !u!114 &524787365
@@ -3069,7 +3098,6 @@ MonoBehaviour:
   - {fileID: 194036650}
   - {fileID: 1065470502}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &527656217 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -3110,7 +3138,6 @@ MonoBehaviour:
   - {fileID: 690767990}
   - {fileID: 2135037492}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &532044850
 Prefab:
   m_ObjectHideFlags: 0
@@ -3196,7 +3223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 20, y: 25, z: 10}
+  start: {x: 20, y: 35, z: 10}
   target: {x: 20, y: 20, z: 10}
   smoothing: 5
 --- !u!114 &532044854
@@ -3213,7 +3240,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1086315403}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &551339523
 Prefab:
   m_ObjectHideFlags: 0
@@ -3299,7 +3325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 0, y: 25, z: 20}
+  start: {x: 0, y: 35, z: 20}
   target: {x: 0, y: 20, z: 20}
   smoothing: 5
 --- !u!114 &551339527
@@ -3315,7 +3341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &555162742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,7 +3463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 10, y: 25, z: -20}
+  start: {x: 10, y: 35, z: -20}
   target: {x: 10, y: 20, z: -20}
   smoothing: 5
 --- !u!114 &562698596
@@ -3455,7 +3480,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 733892532}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &577326802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,7 +3605,6 @@ MonoBehaviour:
   - {fileID: 1490113307}
   - {fileID: 1576964962}
   delay: 0.5
-  start: {x: 10, y: 0, z: -5}
 --- !u!114 &584574651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3635,7 +3658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &605618587 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4920556501594646, guid: ab3b37a6ec82f094bbbbe7360042229d,
@@ -3737,7 +3759,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 1
-  start: {x: -10, y: 0, z: -5}
 --- !u!1 &624734401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,7 +3888,6 @@ MonoBehaviour:
   - {fileID: 1490113307}
   - {fileID: 1576964962}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &628001155 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -4056,7 +4076,6 @@ MonoBehaviour:
   - {fileID: 1940931775}
   - {fileID: 1457541015}
   delay: 0.5
-  start: {x: 15, y: 0, z: -20}
 --- !u!114 &654604927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4162,7 +4181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -10, y: 25, z: 0}
+  start: {x: -10, y: 35, z: 0}
   target: {x: -10, y: 20, z: 0}
   smoothing: 5
 --- !u!114 &681913314
@@ -4176,9 +4195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68689d5d4ea986c4994accf2ea4aec48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movefloor: []
-  delay: 1
-  start: {x: 0, y: 5, z: 0}
+  movefloor:
+  - {fileID: 1200441035}
+  delay: 2
 --- !u!1001 &684264089
 Prefab:
   m_ObjectHideFlags: 0
@@ -4275,7 +4294,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &689064296
 Prefab:
   m_ObjectHideFlags: 0
@@ -4372,7 +4390,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &693590924
 Prefab:
   m_ObjectHideFlags: 0
@@ -4471,7 +4488,6 @@ MonoBehaviour:
   - {fileID: 529080934}
   - {fileID: 687775498}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &718903468 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -4628,7 +4644,6 @@ MonoBehaviour:
   - {fileID: 426849970}
   - {fileID: 1971745572}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!114 &733892534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4641,7 +4656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 15, y: 25, z: -15}
+  start: {x: 15, y: 35, z: -15}
   target: {x: 15, y: 20, z: -15}
   smoothing: 5
 --- !u!1001 &736353612
@@ -4729,7 +4744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 0, y: 25, z: 5}
+  start: {x: 0, y: 35, z: 5}
   target: {x: 0, y: 20, z: 5}
   smoothing: 5
 --- !u!114 &736353616
@@ -4748,7 +4763,6 @@ MonoBehaviour:
   - {fileID: 1330949099}
   - {fileID: 1841953519}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &745241083
 Prefab:
   m_ObjectHideFlags: 0
@@ -4832,7 +4846,6 @@ MonoBehaviour:
   - {fileID: 1169765758}
   - {fileID: 1940931775}
   delay: 0.5
-  start: {x: 5, y: 0, z: -20}
 --- !u!114 &745241086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4883,7 +4896,6 @@ MonoBehaviour:
   - {fileID: 1890246620}
   - {fileID: 697207665}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &755638029 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -4916,7 +4928,6 @@ MonoBehaviour:
   - {fileID: 403250100}
   - {fileID: 1169765758}
   delay: 2
-  start: {x: -5, y: 0, z: -15}
 --- !u!114 &785366088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4967,7 +4978,6 @@ MonoBehaviour:
   - {fileID: 529080934}
   - {fileID: 947338731}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &804739051 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -5012,7 +5022,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 467267170}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &815902712 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -5047,8 +5056,24 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1581608456}
   - {fileID: 1033880735}
+  - {fileID: 840180211}
+  - {fileID: 307509085}
   delay: 0.5
-  start: {x: -20, y: 0, z: 20}
+--- !u!114 &815902718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815902712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e252635c21a308e42af914ddcf328913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point_1: {x: -20, y: 5, z: 20}
+  point_2: {x: -20, y: 20, z: 20}
+  smoothing: 2
+  delay: 0.5
 --- !u!4 &823260560 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -5087,7 +5112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &826261679 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -5193,7 +5217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 5, y: 25, z: -5}
+  start: {x: 5, y: 35, z: -5}
   target: {x: 5, y: 20, z: -5}
   smoothing: 5
 --- !u!114 &838976515
@@ -5211,7 +5235,6 @@ MonoBehaviour:
   - {fileID: 1320063496}
   - {fileID: 1065470502}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &839330886 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4920556501594646, guid: ab3b37a6ec82f094bbbbe7360042229d,
@@ -5302,7 +5325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -15, y: 25, z: 20}
+  start: {x: -15, y: 35, z: 20}
   target: {x: -15, y: 20, z: 20}
   smoothing: 5
 --- !u!114 &840180213
@@ -5320,7 +5343,6 @@ MonoBehaviour:
   - {fileID: 307509085}
   - {fileID: 1957098168}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &856249863
 Prefab:
   m_ObjectHideFlags: 0
@@ -5568,7 +5590,103 @@ MonoBehaviour:
   - {fileID: 1670974539}
   - {fileID: 814305798}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
+--- !u!1 &882291378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 882291379}
+  - component: {fileID: 882291383}
+  - component: {fileID: 882291382}
+  - component: {fileID: 882291381}
+  - component: {fileID: 882291380}
+  m_Layer: 0
+  m_Name: TPinscene (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882291379
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882291378}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0.2, y: 1, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 681913311}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &882291380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882291378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a03e847d26a050499a6ac774668b866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: -5, y: 10, z: 0}
+--- !u!23 &882291381
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882291378}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &882291382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882291378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &882291383
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 882291378}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &891064214 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -5834,7 +5952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -10, y: 25, z: 20}
+  start: {x: -10, y: 35, z: 20}
   target: {x: -10, y: 20, z: 20}
   smoothing: 5
 --- !u!114 &935561548
@@ -5851,7 +5969,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1925934022}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &947338731 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -5890,7 +6007,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &958887656 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -5981,7 +6097,6 @@ MonoBehaviour:
   - {fileID: 1056531459}
   - {fileID: 1086809355}
   delay: 1
-  start: {x: 0, y: 5, z: 0}
 --- !u!114 &971749083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6080,7 +6195,6 @@ MonoBehaviour:
   - {fileID: 293019739}
   - {fileID: 745241084}
   delay: 0.5
-  start: {x: 5, y: 0, z: -15}
 --- !u!114 &977525814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6177,7 +6291,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: -20, y: 0, z: 0}
 --- !u!114 &988892673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6359,7 +6472,6 @@ MonoBehaviour:
   - {fileID: 1303673173}
   - {fileID: 815902712}
   delay: 0.5
-  start: {x: -20, y: 0, z: 15}
 --- !u!1001 &1042681011
 Prefab:
   m_ObjectHideFlags: 0
@@ -6571,7 +6683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 20, y: 25, z: 0}
+  start: {x: 20, y: 35, z: 0}
   target: {x: 20, y: 20, z: 0}
   smoothing: 5
 --- !u!114 &1043097135
@@ -6587,7 +6699,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1050855337 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -6633,7 +6744,6 @@ MonoBehaviour:
   - {fileID: 1200441035}
   - {fileID: 971749078}
   delay: 1
-  start: {x: -5, y: 0, z: 0}
 --- !u!1001 &1065470500
 Prefab:
   m_ObjectHideFlags: 0
@@ -6719,7 +6829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 10, y: 25, z: -5}
+  start: {x: 10, y: 35, z: -5}
   target: {x: 10, y: 20, z: -5}
   smoothing: 5
 --- !u!114 &1065470504
@@ -6736,7 +6846,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 838976513}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1073830976
 Prefab:
   m_ObjectHideFlags: 0
@@ -6881,7 +6990,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: -5, y: 0, z: -20}
 --- !u!114 &1080629373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6990,7 +7098,6 @@ MonoBehaviour:
   - {fileID: 2036722562}
   - {fileID: 1431557799}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!114 &1086315405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7003,7 +7110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 15, y: 25, z: 15}
+  start: {x: 15, y: 35, z: 15}
   target: {x: 15, y: 20, z: 15}
   smoothing: 5
 --- !u!1 &1086809355 stripped
@@ -7046,7 +7153,6 @@ MonoBehaviour:
   - {fileID: 1107927549}
   - {fileID: 971749078}
   delay: 1
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1094138097 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -7072,7 +7178,6 @@ MonoBehaviour:
   - {fileID: 442414142}
   - {fileID: 293019739}
   delay: 0.5
-  start: {x: 0, y: 0, z: -10}
 --- !u!114 &1107927554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7173,7 +7278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 0, y: 25, z: -10}
+  start: {x: 0, y: 35, z: -10}
   target: {x: 0, y: 20, z: -10}
   smoothing: 5
 --- !u!114 &1117469494
@@ -7187,9 +7292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68689d5d4ea986c4994accf2ea4aec48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movefloor: []
-  delay: 1
-  start: {x: 0, y: 0, z: 0}
+  movefloor:
+  - {fileID: 1107927549}
+  delay: 2
 --- !u!1 &1130625235 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -7230,7 +7335,6 @@ MonoBehaviour:
   - {fileID: 971749078}
   - {fileID: 626298532}
   delay: 1
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &1142208473 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -7253,7 +7357,6 @@ MonoBehaviour:
   - {fileID: 1574354331}
   - {fileID: 403250100}
   delay: 2
-  start: {x: -15, y: 0, z: -15}
 --- !u!114 &1142208478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7368,7 +7471,6 @@ MonoBehaviour:
   - {fileID: 498987619}
   - {fileID: 1890246620}
   delay: 0.5
-  start: {x: -5, y: 0, z: 20}
 --- !u!1 &1162102506 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -7388,7 +7490,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1142208473}
   delay: 0.5
-  start: {x: -20, y: 0, z: -15}
 --- !u!114 &1162102511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7489,7 +7590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 15, y: 25, z: 10}
+  start: {x: 15, y: 35, z: 10}
   target: {x: 15, y: 20, z: 10}
   smoothing: 5
 --- !u!114 &1162335984
@@ -7506,7 +7607,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1086315403}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1162413447
 Prefab:
   m_ObjectHideFlags: 0
@@ -7651,7 +7751,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: -20}
 --- !u!114 &1169765763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7752,7 +7851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 10, y: 25, z: 20}
+  start: {x: 10, y: 35, z: 20}
   target: {x: 10, y: 20, z: 20}
   smoothing: 5
 --- !u!114 &1181997005
@@ -7769,7 +7868,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1086315403}
   delay: 2
-  start: {x: 20, y: 0, z: 20}
 --- !u!1001 &1182454924
 Prefab:
   m_ObjectHideFlags: 0
@@ -7851,7 +7949,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 10, y: 0, z: -15}
 --- !u!114 &1182454927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7902,7 +7999,6 @@ MonoBehaviour:
   - {fileID: 824826653}
   - {fileID: 16674230}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &1200441035 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -7938,7 +8034,6 @@ MonoBehaviour:
   - {fileID: 1477665326}
   - {fileID: 620082917}
   delay: 1
-  start: {x: -10, y: 0, z: 0}
 --- !u!4 &1206785246 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -8110,7 +8205,6 @@ MonoBehaviour:
   - {fileID: 687775498}
   - {fileID: 467267170}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1274074823 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -8229,7 +8323,6 @@ MonoBehaviour:
   - {fileID: 1361860340}
   - {fileID: 971749078}
   delay: 1
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1301339681
 Prefab:
   m_ObjectHideFlags: 0
@@ -8324,7 +8417,6 @@ MonoBehaviour:
   - {fileID: 1991719603}
   - {fileID: 1898707876}
   delay: 2
-  start: {x: -20, y: 0, z: 10}
 --- !u!4 &1308007746 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -8348,7 +8440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: -15, y: 0, z: 0}
 --- !u!114 &1313243718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8449,7 +8540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 0, y: 25, z: 15}
+  start: {x: 0, y: 35, z: 15}
   target: {x: 0, y: 20, z: 15}
   smoothing: 5
 --- !u!114 &1314362724
@@ -8467,7 +8558,6 @@ MonoBehaviour:
   - {fileID: 551339525}
   - {fileID: 1940717054}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1320063494
 Prefab:
   m_ObjectHideFlags: 0
@@ -8553,7 +8643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 0, y: 25, z: -5}
+  start: {x: 0, y: 35, z: -5}
   target: {x: 0, y: 20, z: -5}
   smoothing: 5
 --- !u!114 &1320063498
@@ -8571,7 +8661,6 @@ MonoBehaviour:
   - {fileID: 1917514811}
   - {fileID: 838976513}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1330949097
 Prefab:
   m_ObjectHideFlags: 0
@@ -8657,7 +8746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -5, y: 25, z: 0}
+  start: {x: -5, y: 35, z: 0}
   target: {x: -5, y: 20, z: 0}
   smoothing: 5
 --- !u!114 &1330949101
@@ -8675,12 +8764,108 @@ MonoBehaviour:
   - {fileID: 1433887308}
   - {fileID: 1917514811}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1335429151 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
     type: 2}
   m_PrefabInternal: {fileID: 1042681011}
+--- !u!1 &1343952704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1343952705}
+  - component: {fileID: 1343952709}
+  - component: {fileID: 1343952708}
+  - component: {fileID: 1343952707}
+  - component: {fileID: 1343952706}
+  m_Layer: 0
+  m_Name: TPinscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1343952705
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343952704}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0.2, y: 1, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 418691836}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1343952706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343952704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a03e847d26a050499a6ac774668b866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: -10, y: 10, z: -10}
+--- !u!23 &1343952707
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343952704}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1343952708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343952704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1343952709
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343952704}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1344925998
 Prefab:
   m_ObjectHideFlags: 0
@@ -8823,7 +9008,6 @@ MonoBehaviour:
   - {fileID: 1182454925}
   - {fileID: 78454861}
   delay: 0.5
-  start: {x: 15, y: 0, z: -15}
 --- !u!114 &1357206451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8874,7 +9058,6 @@ MonoBehaviour:
   - {fileID: 183408629}
   - {fileID: 797123099}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1379702006
 Prefab:
   m_ObjectHideFlags: 0
@@ -9114,13 +9297,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1399684388}
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalRotation: {x: 0.656059, y: 0, z: 0, w: 0.75470966}
   m_LocalPosition: {x: 0, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 82, y: 0, z: 0}
 --- !u!114 &1399684393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9422,7 +9605,6 @@ MonoBehaviour:
   - {fileID: 1712246205}
   - {fileID: 1162335982}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!114 &1431557801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9435,7 +9617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 20, y: 25, z: 15}
+  start: {x: 20, y: 35, z: 15}
   target: {x: 20, y: 20, z: 15}
   smoothing: 5
 --- !u!1001 &1432361834
@@ -9586,7 +9768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -5, y: 25, z: 5}
+  start: {x: -5, y: 35, z: 5}
   target: {x: -5, y: 20, z: 5}
   smoothing: 5
 --- !u!114 &1433887310
@@ -9604,7 +9786,6 @@ MonoBehaviour:
   - {fileID: 1882832867}
   - {fileID: 1330949099}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1437313823
 Prefab:
   m_ObjectHideFlags: 0
@@ -9805,7 +9986,6 @@ MonoBehaviour:
   - {fileID: 584574649}
   - {fileID: 1182454925}
   delay: 0.5
-  start: {x: 10, y: 0, z: -10}
 --- !u!114 &1440906890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9947,7 +10127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
       propertyPath: m_Name
-      value: Floor (4)
+      value: elevator2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
@@ -9971,8 +10151,9 @@ MonoBehaviour:
   movefloor:
   - {fileID: 78454861}
   - {fileID: 654604925}
+  - {fileID: 1971745572}
+  - {fileID: 1875670665}
   delay: 0.5
-  start: {x: 20, y: 0, z: 20}
 --- !u!114 &1457541017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9988,6 +10169,21 @@ MonoBehaviour:
   start: {x: 20, y: 0, z: -20}
   target: {x: 20, y: 5, z: -20}
   smoothing: 5
+--- !u!114 &1457541021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457541015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e252635c21a308e42af914ddcf328913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point_1: {x: 20, y: 5, z: -20}
+  point_2: {x: 20, y: 20, z: -20}
+  smoothing: 2
+  delay: 0.5
 --- !u!4 &1467942222 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -10028,7 +10224,6 @@ MonoBehaviour:
   - {fileID: 1671873515}
   - {fileID: 1200441035}
   delay: 1
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &1490113307 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -10052,7 +10247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 5, y: 0, z: -5}
 --- !u!114 &1490113310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10237,7 +10431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 15, y: 25, z: -10}
+  start: {x: 15, y: 35, z: -10}
   target: {x: 15, y: 20, z: -10}
   smoothing: 5
 --- !u!114 &1518425198
@@ -10254,7 +10448,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 733892532}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1554595294 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -10440,7 +10633,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
       propertyPath: m_Name
-      value: Floor (8)
+      value: elevator3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
@@ -10465,7 +10658,6 @@ MonoBehaviour:
   - {fileID: 1162102506}
   - {fileID: 1893421664}
   delay: 0.5
-  start: {x: -20, y: 0, z: -20}
 --- !u!114 &1574354333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10481,6 +10673,20 @@ MonoBehaviour:
   start: {x: -20, y: 0, z: -20}
   target: {x: -20, y: 5, z: -20}
   smoothing: 5
+--- !u!114 &1574354334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574354331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9208700be300c429f22aa53af2d032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point_1: {x: -20, y: 20, z: -20}
+  smoothing: 1
+  delay: 2
 --- !u!1 &1575474590
 GameObject:
   m_ObjectHideFlags: 0
@@ -10651,7 +10857,6 @@ MonoBehaviour:
   - {fileID: 584574649}
   - {fileID: 1191391047}
   delay: 0.5
-  start: {x: 15, y: 0, z: -5}
 --- !u!114 &1576964964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10707,7 +10912,6 @@ MonoBehaviour:
   - {fileID: 815902712}
   - {fileID: 498987619}
   delay: 0.5
-  start: {x: -15, y: 0, z: 20}
 --- !u!1001 &1582022506
 Prefab:
   m_ObjectHideFlags: 0
@@ -10856,7 +11060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 10, y: 25, z: 10}
+  start: {x: 10, y: 35, z: 10}
   target: {x: 10, y: 20, z: 10}
   smoothing: 5
 --- !u!114 &1582402828
@@ -10874,7 +11078,6 @@ MonoBehaviour:
   - {fileID: 1086315403}
   - {fileID: 441993710}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1596399886
 Prefab:
   m_ObjectHideFlags: 0
@@ -11202,7 +11405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &1661952040 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -11230,7 +11432,6 @@ MonoBehaviour:
   - {fileID: 324953032}
   - {fileID: 1107927549}
   delay: 2
-  start: {x: -5, y: 0, z: -5}
 --- !u!114 &1661952046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11279,7 +11480,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1668714313 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -11325,7 +11525,6 @@ MonoBehaviour:
   - {fileID: 257828528}
   - {fileID: 626298532}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &1671873515 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -11361,7 +11560,6 @@ MonoBehaviour:
   - {fileID: 230063577}
   - {fileID: 183408629}
   delay: 0.5
-  start: {x: -10, y: 0, z: 10}
 --- !u!1001 &1680360533
 Prefab:
   m_ObjectHideFlags: 0
@@ -11522,7 +11720,6 @@ MonoBehaviour:
   - {fileID: 2036722562}
   - {fileID: 1431557799}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!114 &1712246207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11535,7 +11732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 15, y: 25, z: 20}
+  start: {x: 15, y: 35, z: 20}
   target: {x: 15, y: 20, z: 20}
   smoothing: 5
 --- !u!1001 &1712722921
@@ -11596,11 +11793,108 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
       propertyPath: m_Name
-      value: Floor (2)
+      value: elevator1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1730600206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1730600207}
+  - component: {fileID: 1730600211}
+  - component: {fileID: 1730600210}
+  - component: {fileID: 1730600209}
+  - component: {fileID: 1730600208}
+  m_Layer: 0
+  m_Name: TPinscene (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1730600207
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730600206}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 0.2, y: 1, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 1117469491}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1730600208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730600206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a03e847d26a050499a6ac774668b866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: 0, y: 10, z: -10}
+--- !u!23 &1730600209
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730600206}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1730600210
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730600206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1730600211
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730600206}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1739695056
 Prefab:
   m_ObjectHideFlags: 0
@@ -11686,7 +11980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -20, y: 25, z: 10}
+  start: {x: -20, y: 35, z: 10}
   target: {x: -20, y: 20, z: 10}
   smoothing: 5
 --- !u!114 &1739695060
@@ -11703,7 +11997,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1925934022}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1779394336 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4920556501594646, guid: ab3b37a6ec82f094bbbbe7360042229d,
@@ -12137,7 +12430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 5, y: 25, z: 0}
+  start: {x: 5, y: 35, z: 0}
   target: {x: 5, y: 20, z: 0}
   smoothing: 5
 --- !u!114 &1841953521
@@ -12156,7 +12449,6 @@ MonoBehaviour:
   - {fileID: 1320063496}
   - {fileID: 1065470502}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1866589866
 Prefab:
   m_ObjectHideFlags: 0
@@ -12242,7 +12534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -15, y: 25, z: 10}
+  start: {x: -15, y: 35, z: 10}
   target: {x: -15, y: 20, z: 10}
   smoothing: 5
 --- !u!114 &1866589870
@@ -12259,7 +12551,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1925934022}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1875670663
 Prefab:
   m_ObjectHideFlags: 0
@@ -12345,7 +12636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 15, y: 25, z: -20}
+  start: {x: 15, y: 35, z: -20}
   target: {x: 15, y: 20, z: -20}
   smoothing: 5
 --- !u!114 &1875670667
@@ -12363,7 +12654,6 @@ MonoBehaviour:
   - {fileID: 1971745572}
   - {fileID: 426849970}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1882832865
 Prefab:
   m_ObjectHideFlags: 0
@@ -12377,7 +12667,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15
+      value: 14.7
       objectReference: {fileID: 0}
     - target: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12449,7 +12739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -5, y: 25, z: 10}
+  start: {x: -5, y: 35, z: 10}
   target: {x: -5, y: 20, z: 10}
   smoothing: 5
 --- !u!114 &1882832869
@@ -12466,7 +12756,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 1433887308}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1883567872 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -12568,7 +12857,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: 20}
 --- !u!1001 &1893421663
 Prefab:
   m_ObjectHideFlags: 0
@@ -12652,7 +12940,6 @@ MonoBehaviour:
   - {fileID: 1574354331}
   - {fileID: 403250100}
   delay: 0.5
-  start: {x: -15, y: 0, z: -20}
 --- !u!114 &1893421666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12703,7 +12990,6 @@ MonoBehaviour:
   - {fileID: 58142531}
   - {fileID: 1477665326}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1917514809
 Prefab:
   m_ObjectHideFlags: 0
@@ -12789,7 +13075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -5, y: 25, z: -5}
+  start: {x: -5, y: 35, z: -5}
   target: {x: -5, y: 20, z: -5}
   smoothing: 5
 --- !u!114 &1917514813
@@ -12809,7 +13095,6 @@ MonoBehaviour:
   - {fileID: 1117469492}
   - {fileID: 470871443}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1925934020
 Prefab:
   m_ObjectHideFlags: 0
@@ -12898,7 +13183,6 @@ MonoBehaviour:
   - {fileID: 307509085}
   - {fileID: 1957098168}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!114 &1925934024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12911,7 +13195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -15, y: 25, z: 15}
+  start: {x: -15, y: 35, z: 15}
   target: {x: -15, y: 20, z: 15}
   smoothing: 5
 --- !u!1001 &1927310126
@@ -13184,7 +13468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 0, y: 25, z: 10}
+  start: {x: 0, y: 35, z: 10}
   target: {x: 0, y: 20, z: 10}
   smoothing: 5
 --- !u!114 &1940717056
@@ -13203,7 +13487,6 @@ MonoBehaviour:
   - {fileID: 1882832867}
   - {fileID: 736353614}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1940931774
 Prefab:
   m_ObjectHideFlags: 0
@@ -13287,7 +13570,6 @@ MonoBehaviour:
   - {fileID: 977525812}
   - {fileID: 1357206449}
   delay: 2
-  start: {x: 10, y: 0, z: -20}
 --- !u!114 &1940931777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13321,7 +13603,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: -15, y: 0, z: -10}
 --- !u!114 &1951008962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13485,7 +13766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -10, y: 25, z: 15}
+  start: {x: -10, y: 35, z: 15}
   target: {x: -10, y: 20, z: 15}
   smoothing: 5
 --- !u!114 &1957098170
@@ -13503,7 +13784,6 @@ MonoBehaviour:
   - {fileID: 935561546}
   - {fileID: 1978909497}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &1965409850 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -13599,7 +13879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 20, y: 25, z: -15}
+  start: {x: 20, y: 35, z: -15}
   target: {x: 20, y: 20, z: -15}
   smoothing: 5
 --- !u!114 &1971745574
@@ -13617,7 +13897,6 @@ MonoBehaviour:
   - {fileID: 1518425196}
   - {fileID: 1875670665}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &1975418544
 Prefab:
   m_ObjectHideFlags: 0
@@ -13766,7 +14045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: -10, y: 25, z: 10}
+  start: {x: -10, y: 35, z: 10}
   target: {x: -10, y: 20, z: 10}
   smoothing: 5
 --- !u!114 &1978909499
@@ -13784,7 +14063,6 @@ MonoBehaviour:
   - {fileID: 1925934022}
   - {fileID: 1433887308}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &1991719603 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -13820,7 +14098,6 @@ MonoBehaviour:
   - {fileID: 1581608456}
   - {fileID: 230063577}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &1993653368
 GameObject:
   m_ObjectHideFlags: 0
@@ -14161,7 +14438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 20, y: 25, z: -10}
+  start: {x: 20, y: 35, z: -10}
   target: {x: 20, y: 20, z: -10}
   smoothing: 5
 --- !u!114 &2003164990
@@ -14178,7 +14455,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 733892532}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &2026819736
 Prefab:
   m_ObjectHideFlags: 0
@@ -14275,7 +14551,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: -10, y: 0, z: -15}
 --- !u!1 &2028457369 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -14310,8 +14585,24 @@ MonoBehaviour:
   movefloor:
   - {fileID: 402365156}
   - {fileID: 2029213913}
+  - {fileID: 1712246205}
+  - {fileID: 1431557799}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
+--- !u!114 &2028457375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2028457369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e252635c21a308e42af914ddcf328913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point_1: {x: 20, y: 5, z: 20}
+  point_2: {x: 20, y: 20, z: 20}
+  smoothing: 2
+  delay: 0.5
 --- !u!1 &2028743144 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -14330,7 +14621,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movefloor: []
   delay: 0.5
-  start: {x: 0, y: 0, z: -25}
 --- !u!114 &2028743149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14380,7 +14670,6 @@ MonoBehaviour:
   movefloor:
   - {fileID: 687775498}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!4 &2035650983 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -14471,7 +14760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  start: {x: 10, y: 25, z: 15}
+  start: {x: 10, y: 35, z: 15}
   target: {x: 10, y: 20, z: 15}
   smoothing: 5
 --- !u!114 &2036722564
@@ -14489,7 +14778,6 @@ MonoBehaviour:
   - {fileID: 1181997003}
   - {fileID: 1582402826}
   delay: 0.5
-  start: {x: 0, y: 0, z: 0}
 --- !u!1001 &2043877782
 Prefab:
   m_ObjectHideFlags: 0
@@ -14849,7 +15137,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2126463828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1925934021}
@@ -14936,7 +15224,6 @@ MonoBehaviour:
   - {fileID: 797123099}
   - {fileID: 879140434}
   delay: 2
-  start: {x: 0, y: 0, z: 0}
 --- !u!1 &2138338405 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -14972,7 +15259,6 @@ MonoBehaviour:
   - {fileID: 1162036921}
   - {fileID: 183408629}
   delay: 0.5
-  start: {x: -5, y: 0, z: 15}
 --- !u!1 &2139883259
 GameObject:
   m_ObjectHideFlags: 0
