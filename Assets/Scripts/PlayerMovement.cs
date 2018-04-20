@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     static Vector3 FrozenSpeed;
     static Vector3 FrozenAngularSpeed;
 
-
     void Start()
     {
         HealthManage.LiveOrNot = true;
@@ -29,32 +28,25 @@ public class PlayerMovement : MonoBehaviour
     {
         if(HealthManage.LiveOrNot)
         {
+            float moveX = Input.GetAxis("Horizontal");
+            float moveZ = Input.GetAxis("Vertical");
+            movement = new Vector3(moveX, 0f, moveZ);
+            movement = movement.normalized;
+            movement = Quaternion.AngleAxis(CameraController.rotationoffset, Vector3.up) * movement;
             if (GroundType == 1)
             {
-                float moveX = Input.GetAxis("Horizontal");
-                float moveZ = Input.GetAxis("Vertical");
-                movement = new Vector3(moveX, 0f, moveZ);
                 rg3d.AddForce(movement * speed);
             }
             else if (GroundType == 2)
             {
-                float moveX = Input.GetAxis("Horizontal");
-                float moveZ = Input.GetAxis("Vertical");
-                movement = new Vector3(moveX, 0f, moveZ);
-                rg3d.velocity = 2.1f * movement;
+                rg3d.velocity = 1.8f * movement;
             }
             else if (GroundType == 3)
             {
-                float moveX = Input.GetAxis("Horizontal");
-                float moveZ = Input.GetAxis("Vertical");
-                movement = new Vector3(-moveX, 0f, -moveZ);
-                rg3d.AddForce(movement * speed * 0.8f);
+                rg3d.AddForce(-movement * speed * 0.8f);
             }
             else if (GroundType == 0)
             {
-                float moveX = Input.GetAxis("Horizontal");
-                float moveZ = Input.GetAxis("Vertical");
-                movement = new Vector3(moveX, 0f, moveZ);
                 rg3d.AddForce(movement * speed * 0.05f);
             }
 
