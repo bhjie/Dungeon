@@ -6,11 +6,8 @@ public class Mazefloor : MonoBehaviour {
 
     public GameObject[] movefloor;
     public float delay=0.5f;
-    public Vector3 start;
-    Vector3 swap;
     private int appear = 0;     //接触这个平面的时候将变为活动状态，离开时变为静止状态
     private float timer = 0f;   //计时器，用来延迟下落
-    private int stay = 0;       //表示小球是否接触这个平面
     private int locking = 0;     //在这个平面激活后只要还在这个平面上就不会发生其他滑动效果
     private int outlock = 0;
     private Mazemoving bri;
@@ -21,10 +18,6 @@ public class Mazefloor : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        timer += Time.deltaTime;
-        
-	}
 
     public void Emerge()
     {
