@@ -44,6 +44,13 @@ public class CameraController : MonoBehaviour {
         {
             targetCamPos = Player.transform.position + offset;
             transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+
+            targetRotation = Quaternion.Euler(0, 0, 0) * Quaternion.identity;
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 2f);
+            if (Quaternion.Angle(targetRotation, transform.rotation) < 0.1f)
+            {
+                transform.rotation = targetRotation;
+            }
         }
         else if(CameraModel == 2)
         {
@@ -64,14 +71,19 @@ public class CameraController : MonoBehaviour {
             offset2 = offset2 + cameramovement;
             transform.position = Vector3.Lerp(transform.position, Player.transform.position + offset2, smoothing * Time.deltaTime);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 1f);
-
+            if (Quaternion.Angle(targetRotation, transform.rotation) < 0.1f)
+            {
+                transform.rotation = targetRotation;
+            }
         }
         
-        if(timelock && Input.GetKey(KeyCode.V))
+        if(timelock && Input.GetKey(KeyCode.V) && HealthManage.LiveOrNot)
         {
             
             if (CameraModel == 1)
             {
+                rotationoffset = 0;
+                offset2 = 1.5f * offset;
                 CameraModel = 2;
                 PlayerMovement.FreezePlayer();
                 ui.SetActive(false);
