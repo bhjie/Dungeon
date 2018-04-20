@@ -9,7 +9,7 @@ public class MazeElevator : MonoBehaviour {
     private int dir=1;
     private int open = 0;
     public float smoothing = 10f;
-    public float delay = 0.5f;
+    public float delay = 2f;
 	// Use this for initialization
 	void Start () {
 		
