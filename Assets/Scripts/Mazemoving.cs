@@ -12,9 +12,13 @@ public class Mazemoving : MonoBehaviour {
     private int scriptlock;
     private float timer;
     private int delaymoving = 0;
+    private int ele=0;
     // Use this for initialization
     void Start () {
-		
+		if (this.gameObject.name.Contains("elevator"))
+        {
+            ele = 1;
+        }
 	}
 	
 	// Update is called once per frame
@@ -30,7 +34,7 @@ public class Mazemoving : MonoBehaviour {
             Vector3 vec = start;
             transform.position = Vector3.Lerp(transform.position, vec, smoothing * Time.deltaTime);
         }
-        if (delaymoving==1 && direction == 0 && scriptlock == 0)
+        if (delaymoving==1 && direction == 0 && scriptlock == 0 && ele==0)
         {
             timer += Time.deltaTime;
             if (timer>=1f)
