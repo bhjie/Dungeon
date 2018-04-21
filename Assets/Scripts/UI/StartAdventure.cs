@@ -21,9 +21,11 @@ public class StartAdventure : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-        if(transform.position.z > 2f)
+        if(PlayerShoot.model == 4 && transform.position.z > 6f)
         {
+            GameManage.GameModel = 1;
             SceneManager.LoadSceneAsync("Stage1");
+            PlayerShoot.model = 5;
         }
 
         if (PlayerShoot.model == 0)

@@ -63,4 +63,12 @@ public class PlayerShoot : MonoBehaviour {
             model = 4;
         }
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(!collision.gameObject.CompareTag("Ground"))
+        {
+            rg3d.velocity = new Vector3(rg3d.velocity.x, rg3d.velocity.y, -rg3d.velocity.z);
+        }
+    }
 }

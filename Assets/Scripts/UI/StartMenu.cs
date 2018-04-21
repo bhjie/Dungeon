@@ -66,7 +66,7 @@ public class StartMenu : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space))
         {
             if(QuitGame.trigger)
             {

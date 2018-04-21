@@ -131,7 +131,7 @@ public class CameraController : MonoBehaviour {
             }
         }
         
-        if(timelock && Input.GetKey(KeyCode.V) && HealthManage.LiveOrNot)
+        if(timelock && Input.GetKey(KeyCode.V) && HealthManage.LiveOrNot && !GameManage.IsPause)
         {
             
             if (CameraModel == 1)
