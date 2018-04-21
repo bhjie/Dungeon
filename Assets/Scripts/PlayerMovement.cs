@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             float moveZ = Input.GetAxis("Vertical");
             movement = new Vector3(moveX, 0f, moveZ);
             movement = movement.normalized;
-            movement = Quaternion.AngleAxis(CameraController.rotationoffset, Vector3.up) * movement;
+            movement = Quaternion.AngleAxis(CameraController.RotationOffsetY, Vector3.up) * movement;
             if (GroundType == 1)
             {
                 rg3d.AddForce(movement * speed);

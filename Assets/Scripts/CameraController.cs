@@ -15,14 +15,16 @@ public class CameraController : MonoBehaviour {
     private Quaternion targetRotation;
     private int counttime;
     private bool timelock;
-    public static float rotationoffset;
+    public static float RotationOffsetY;
+    float RotationOffsetX;
     float rotatespeed;
     public float originRotationY = 10;
     public float originRotationX = 60;
 
     void Start () {
         rotatespeed = 2f;
-        rotationoffset = originRotationY;
+        RotationOffsetY = originRotationY;
+        RotationOffsetX = originRotationX;
         CameraModel = 1;
         Player = GameObject.Find("Player");
         offset2 = 1.5f * offset;
@@ -46,15 +48,15 @@ public class CameraController : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.Q))
             {
-                rotationoffset = rotationoffset - rotatespeed;
+                RotationOffsetY = RotationOffsetY - rotatespeed;
             }
             else if (Input.GetKey(KeyCode.E))
             {
-                rotationoffset = rotationoffset + rotatespeed;
+                RotationOffsetY = RotationOffsetY + rotatespeed;
             }
 
 
-            targetCamPos = Player.transform.position + Quaternion.AngleAxis(rotationoffset, Vector3.up) * offset;
+            targetCamPos = Player.transform.position + Quaternion.AngleAxis(RotationOffsetY, Vector3.up) * offset;
 
             if(Input.GetAxis("Mouse ScrollWheel") > 0 && offset.y < 25)
             {
@@ -67,7 +69,7 @@ public class CameraController : MonoBehaviour {
 
             transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
 
-            targetRotation = Quaternion.Euler(originRotationX, rotationoffset, 0) * Quaternion.identity;
+            targetRotation = Quaternion.Euler(originRotationX, RotationOffsetY, 0) * Quaternion.identity;
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3f);
             if (Quaternion.Angle(targetRotation, transform.rotation) < 0.1f)
             {
@@ -79,11 +81,11 @@ public class CameraController : MonoBehaviour {
             float moveY = 0;
             if(Input.GetKey(KeyCode.Q))
             {
-                rotationoffset = rotationoffset - rotatespeed;
+                RotationOffsetY = RotationOffsetY - rotatespeed;
             }
             else if(Input.GetKey(KeyCode.E))
             {
-                rotationoffset = rotationoffset + rotatespeed;
+                RotationOffsetY = RotationOffsetY + rotatespeed;
             }
             else if(Input.GetKey(KeyCode.LeftShift))
             {
@@ -93,7 +95,7 @@ public class CameraController : MonoBehaviour {
             {
                 moveY = 1;
             }
-            targetRotation = Quaternion.Euler(originRotationX, rotationoffset, 0) * Quaternion.identity;
+            
 
             if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
@@ -104,11 +106,15 @@ public class CameraController : MonoBehaviour {
                 offset2 = offset2 - transform.forward;
             }
 
+
             float moveX = Input.GetAxis("Horizontal");
             float moveZ = Input.GetAxis("Vertical");
-            cameramovement = new Vector3(moveX, 2 * moveY, moveZ);
+            cameramovement = new Vector3(moveX, 2 * moveY, 0);
+            RotationOffsetX = RotationOffsetX - moveZ;
 
-            cameramovement = Quaternion.AngleAxis(rotationoffset, Vector3.up) * cameramovement;
+            targetRotation = Quaternion.Euler(RotationOffsetX, RotationOffsetY, 0) * Quaternion.identity;
+
+            cameramovement = Quaternion.AngleAxis(RotationOffsetY, Vector3.up) * cameramovement;
 
             offset2 = offset2 + cameramovement;
             targetCamPos = Player.transform.position + offset2;
