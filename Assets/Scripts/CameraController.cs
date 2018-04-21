@@ -15,12 +15,14 @@ public class CameraController : MonoBehaviour {
     private Quaternion targetRotation;
     private int counttime;
     private bool timelock;
-    float rotationoffset;
+    public static float rotationoffset;
     float rotatespeed;
+    public float originRotationY = 10;
+    public float originRotationX = 60;
 
     void Start () {
-        rotatespeed = 3f;
-        rotationoffset = 0;
+        rotatespeed = 2f;
+        rotationoffset = originRotationY;
         CameraModel = 1;
         Player = GameObject.Find("Player");
         offset2 = 1.5f * offset;
@@ -42,11 +44,39 @@ public class CameraController : MonoBehaviour {
 
         if(CameraModel == 1)
         {
-            targetCamPos = Player.transform.position + offset;
+            if (Input.GetKey(KeyCode.Q))
+            {
+                rotationoffset = rotationoffset - rotatespeed;
+            }
+            else if (Input.GetKey(KeyCode.E))
+            {
+                rotationoffset = rotationoffset + rotatespeed;
+            }
+
+
+            targetCamPos = Player.transform.position + Quaternion.AngleAxis(rotationoffset, Vector3.up) * offset;
+
+            if(Input.GetAxis("Mouse ScrollWheel") > 0 && offset.y < 25)
+            {
+                offset = 1.1f * offset;
+            }
+            if(Input.GetAxis("Mouse ScrollWheel") < 0 && offset.y > 5)
+            {
+                offset = 0.9f * offset;
+            }
+
             transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+
+            targetRotation = Quaternion.Euler(originRotationX, rotationoffset, 0) * Quaternion.identity;
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3f);
+            if (Quaternion.Angle(targetRotation, transform.rotation) < 0.1f)
+            {
+                transform.rotation = targetRotation;
+            }
         }
         else if(CameraModel == 2)
         {
+            float moveY = 0;
             if(Input.GetKey(KeyCode.Q))
             {
                 rotationoffset = rotationoffset - rotatespeed;
@@ -55,23 +85,51 @@ public class CameraController : MonoBehaviour {
             {
                 rotationoffset = rotationoffset + rotatespeed;
             }
-            targetRotation = Quaternion.Euler(0, rotationoffset, 0) * Quaternion.identity;
+            else if(Input.GetKey(KeyCode.LeftShift))
+            {
+                moveY = -1;
+            }
+            else if(Input.GetKey(KeyCode.Space))
+            {
+                moveY = 1;
+            }
+            targetRotation = Quaternion.Euler(originRotationX, rotationoffset, 0) * Quaternion.identity;
+
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            {
+                offset2 = offset2 + transform.forward;
+            }
+            if (Input.GetAxis("Mouse ScrollWheel") < 0)
+            {
+                offset2 = offset2 - transform.forward;
+            }
 
             float moveX = Input.GetAxis("Horizontal");
             float moveZ = Input.GetAxis("Vertical");
-            float moveY = Input.GetAxis("Mouse ScrollWheel");
-            cameramovement = new Vector3(moveX, 15 * moveY, moveZ);
-            offset2 = offset2 + cameramovement;
-            transform.position = Vector3.Lerp(transform.position, Player.transform.position + offset2, smoothing * Time.deltaTime);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 1f);
+            cameramovement = new Vector3(moveX, 2 * moveY, moveZ);
 
+            cameramovement = Quaternion.AngleAxis(rotationoffset, Vector3.up) * cameramovement;
+
+            offset2 = offset2 + cameramovement;
+            targetCamPos = Player.transform.position + offset2;
+
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3f);
+
+            
+            transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+            if (Quaternion.Angle(targetRotation, transform.rotation) < 0.1f)
+            {
+                transform.rotation = targetRotation;
+            }
         }
         
-        if(timelock && Input.GetKey(KeyCode.V))
+        if(timelock && Input.GetKey(KeyCode.V) && HealthManage.LiveOrNot)
         {
             
             if (CameraModel == 1)
             {
+                offset2 = 1.5f * offset;
                 CameraModel = 2;
                 PlayerMovement.FreezePlayer();
                 ui.SetActive(false);

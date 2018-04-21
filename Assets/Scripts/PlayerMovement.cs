@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     static Vector3 FrozenSpeed;
     static Vector3 FrozenAngularSpeed;
 
-
     void Start()
     {
         HealthManage.LiveOrNot = true;
@@ -27,49 +26,46 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GroundType == 1)
+        if(HealthManage.LiveOrNot)
         {
             float moveX = Input.GetAxis("Horizontal");
             float moveZ = Input.GetAxis("Vertical");
             movement = new Vector3(moveX, 0f, moveZ);
-            rg3d.AddForce(movement * speed);
-        }
-        else if (GroundType == 2)
-        {
-            float moveX = Input.GetAxis("Horizontal");
-            float moveZ = Input.GetAxis("Vertical");
-            movement = new Vector3(moveX, 0f, moveZ);
-            rg3d.velocity = 2.1f * movement;
-        }
-        else if (GroundType == 3)
-        {
-            float moveX = Input.GetAxis("Horizontal");
-            float moveZ = Input.GetAxis("Vertical");
-            movement = new Vector3(-moveX, 0f, -moveZ);
-            rg3d.AddForce(movement * speed * 0.8f);
-        }
-        else if(GroundType == 0)
-        {
-            float moveX = Input.GetAxis("Horizontal");
-            float moveZ = Input.GetAxis("Vertical");
-            movement = new Vector3(moveX, 0f, moveZ);
-            rg3d.AddForce(movement * speed * 0.05f);
-        }
-
-        if(Input.GetKey(KeyCode.LeftShift) && GroundType != 0)
-        {
-            movement = new Vector3(0f, -15f, 0f);
-            rg3d.AddForce(movement * speed);
-        }
-
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if(GroundType == 1 || GroundType == 2 || GroundType == 3)
+            movement = movement.normalized;
+            movement = Quaternion.AngleAxis(CameraController.rotationoffset, Vector3.up) * movement;
+            if (GroundType == 1)
             {
-                rg3d.velocity = new Vector3(rg3d.velocity.x, jumpspeed, rg3d.velocity.z);
+                rg3d.AddForce(movement * speed);
+            }
+            else if (GroundType == 2)
+            {
+                rg3d.velocity = 1.8f * movement;
+            }
+            else if (GroundType == 3)
+            {
+                rg3d.AddForce(-movement * speed * 0.8f);
+            }
+            else if (GroundType == 0)
+            {
+                rg3d.AddForce(movement * speed * 0.05f);
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift) && GroundType != 0)
+            {
+                movement = new Vector3(0f, -15f, 0f);
+                rg3d.AddForce(movement * speed);
+            }
+
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                if (GroundType == 1 || GroundType == 2 || GroundType == 3)
+                {
+                    rg3d.velocity = new Vector3(rg3d.velocity.x, jumpspeed, rg3d.velocity.z);
+                }
             }
         }
+        
     }
 
     private void OnCollisionStay(Collision other)
