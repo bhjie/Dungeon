@@ -29,6 +29,24 @@ public class OpentheDoor : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (type.Contains("Bridge"))
+            {
+                Bridge bridge_s = trigger.GetComponent<Bridge>();
+                bridge_s.Appear();
+            }
+            if (type.Contains("ComponentEnable"))
+            {
+                ComponentEnable componentenable = trigger.GetComponent<ComponentEnable>();
+                componentenable.UnLock();
+            }
+            StartCoroutine(EnableEffect());
+        }
+    }
+
     IEnumerator EnableEffect()
     {
         yield return new WaitForSeconds(0.5f);
