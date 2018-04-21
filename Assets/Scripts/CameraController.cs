@@ -33,6 +33,7 @@ public class CameraController : MonoBehaviour {
     }
 	
 	void FixedUpdate () {
+
         counttime++;
         if(counttime == 20)
         {
