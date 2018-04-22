@@ -6,7 +6,10 @@ public class Elevator : MonoBehaviour {
 
     public Vector3 point_1;
     public Vector3 point_2;
-    private int dir = 1;
+    public GameObject door1;
+    public GameObject door2;
+    public float up;
+    private float dir = 1;
     private int open = 0;
     public float smoothing = 2f;
     public float delay = 2f;
@@ -18,7 +21,7 @@ public class Elevator : MonoBehaviour {
     {
         vec = point_1;
         vec_2 = point_2;
-        timer = (vec_2 - vec).magnitude / smoothing;
+        timer = 0;
     }
 
     // Update is called once per frame
@@ -29,24 +32,29 @@ public class Elevator : MonoBehaviour {
         {
             vec = point_1;
             vec_2 = point_2;
-            //transform.position = Vector3.Lerp(transform.position, vec, smoothing * Time.deltaTime);
-            transform.position = transform.position + (vec_2 - vec).normalized * smoothing * Time.deltaTime;
-            timer -= Time.deltaTime;
+            //transform.position = transform.position + (vec_2 - vec).normalized * smoothing * Time.deltaTime;
+            transform.Translate(Vector3.up * Time.deltaTime * smoothing * up,Space.World);
+            timer += Time.deltaTime;
         }
         if (open == 1 && dir == 0)
         {
-            Vector3 vec = point_2;
-            transform.position = Vector3.Lerp(transform.position, vec, smoothing * Time.deltaTime);
+            vec = point_2;
+            vec_2 = point_1;
+            //transform.position = transform.position + (vec_2 - vec).normalized * smoothing * Time.deltaTime;
+            transform.Translate(-Vector3.up * Time.deltaTime * smoothing * up, Space.World);
+            timer += Time.deltaTime;
         }
-        if (dir == 1 && timer<=0 && open == 1)
+        if (dir == 1 && timer >= (vec_2 - vec).magnitude / smoothing && open == 1) 
         {
             open = 0;
             dir = 1 - dir;
+            timer = 0;
         }
-        if (dir == 0 && timer<=0 && open == 1)
+        if (dir == 0 && timer >= (vec_2 - vec).magnitude / smoothing && open == 1)
         {
             open = 0;
             dir = 1 - dir;
+            timer = 0;
         }
     }
 
@@ -54,6 +62,12 @@ public class Elevator : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (door1.GetComponent<Rotate>().state==1)
+            {
+                door1.GetComponent<Rotate>().StartRotate();
+                door2.GetComponent<Rotate>().StartRotate();
+            }
+
             StartCoroutine(MyMethod());
 
         }
@@ -65,7 +79,16 @@ public class Elevator : MonoBehaviour {
     {
         yield return new WaitForSeconds(delay);
         open = 1;
-
-
+        if (dir ==1 && up==-1 || dir==0 && up==1)
+        {
+            yield return new WaitForSeconds((point_1-point_2).magnitude/smoothing);
+            if (door1.GetComponent<Rotate>().state == 0)
+            {
+                door1.GetComponent<Rotate>().StartRotate();
+                door2.GetComponent<Rotate>().StartRotate();
+            }
+            
+        }
+        
     }
 }
