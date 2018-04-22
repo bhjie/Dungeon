@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public static bool IfFreeze;
     public float speed;
     public float jumpspeed;
     private static Rigidbody rg3d;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        IfFreeze = false;
         HealthManage.LiveOrNot = true;
         GroundType = 0;
         movement = new Vector3(0f, 0f, 0f); 
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
             float moveZ = Input.GetAxis("Vertical");
             movement = new Vector3(moveX, 0f, moveZ);
             movement = movement.normalized;
-            movement = Quaternion.AngleAxis(CameraController.rotationoffset, Vector3.up) * movement;
+            movement = Quaternion.AngleAxis(CameraController.RotationOffsetY, Vector3.up) * movement;
             if (GroundType == 1)
             {
                 rg3d.AddForce(movement * speed);
@@ -147,21 +148,36 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         anim.SetTrigger("GameOverTrigger");
         yield return new WaitForSeconds(1.0f);
-        if (HealthManage.PlayerHealth == 0)
+        if(GameManage.GameModel == 1)
         {
-            SceneManager.LoadSceneAsync("Stage1");
-            HealthManage.PlayerHealth = HealthManage.BeginningHealth;
+            if (HealthManage.PlayerHealth == 0)
+            {
+                SceneManager.LoadSceneAsync("Stage1");
+                HealthManage.PlayerHealth = HealthManage.BeginningHealth;
+            }
+            else
+            {
+                ItemManage.PassOrReStart = false;
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            }
         }
-        else
+        else if(GameManage.GameModel == 2)
         {
-            ItemManage.PassOrReStart = false;
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            if (HealthManage.PlayerHealth == 0)
+            {
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+                HealthManage.PlayerHealth = HealthManage.BeginningHealth;
+            }
+            else
+            {
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            }
         }
-        
     }
 
     public static void FreezePlayer()
     {
+        IfFreeze = true;
         FrozenAngularSpeed = rg3d.angularVelocity;
         FrozenSpeed = rg3d.velocity;
         rg3d.constraints = RigidbodyConstraints.FreezeAll;
@@ -170,6 +186,7 @@ public class PlayerMovement : MonoBehaviour
 
     public static void UnFreezePlayer()
     {
+        IfFreeze = false;
         rg3d.constraints = RigidbodyConstraints.None;
         rg3d.velocity = FrozenSpeed;
         rg3d.angularVelocity = FrozenAngularSpeed;

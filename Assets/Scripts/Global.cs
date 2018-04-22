@@ -5,18 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class Global : MonoBehaviour {
     public Vector3 point;
-   
-	// Use this for initialization
+
 	void Start ()
     {
         LoadPlayer();
-        if (SceneManager.GetActiveScene().name == "Stage4")
+        if(GameManage.GameModel == 1)
         {
-            ItemManage.LoadItemStage4();
-        }
-        if (SceneManager.GetActiveScene().name == "Stage6")
-        {
-            ItemManage.LoadItemStage6();
+            if (SceneManager.GetActiveScene().name == "Stage4")
+            {
+                ItemManage.LoadItemStage4();
+            }
+            if (SceneManager.GetActiveScene().name == "Stage6")
+            {
+                ItemManage.LoadItemStage6();
+            }
         }
     }
 
