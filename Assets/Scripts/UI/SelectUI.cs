@@ -46,7 +46,7 @@ public class SelectUI : MonoBehaviour {
         timeLock = true;
         nowStageNum = 1;
         nowViewNum = 1;
-        numberOfStages = 5;
+        numberOfStages = 8;
 
         origin = new Vector3(1, 1, 1);
         smooth = 6f;

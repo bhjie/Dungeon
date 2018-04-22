@@ -12,18 +12,18 @@ public class Tp : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(GameManage.GameModel == 1)
-            {
-                ItemManage.PassOrReStart = true;
-                SceneManager.LoadSceneAsync(NextStage);
-            }
-            else if(GameManage.GameModel == 2)
+            if(GameManage.GameModel == 2 || SceneManager.GetActiveScene().name == "Stage8")
             {
                 Rigidbody rg3d = other.gameObject.GetComponent<Rigidbody>();
                 rg3d.velocity = new Vector3(0, 0, 0);
                 rg3d.constraints = RigidbodyConstraints.FreezePosition;
                 StageFinish.IfFinish = true;
                 FinishUI.SetActive(true);
+            }
+            else if (GameManage.GameModel == 1)
+            {
+                ItemManage.PassOrReStart = true;
+                SceneManager.LoadSceneAsync(NextStage);
             }
         }
     }
