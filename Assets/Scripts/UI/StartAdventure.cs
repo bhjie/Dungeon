@@ -39,6 +39,12 @@ public class StartAdventure : MonoBehaviour {
             {
                 transform.position = Vector3.Lerp(transform.position, backPosition, 5f * Time.deltaTime);
             }
-        }    
+        }
+        else if(PlayerShoot.model == 6)
+        {
+            Rigidbody rg3d = GetComponent<Rigidbody>();
+            rg3d.velocity = new Vector3(0, 0, 0);
+            PlayerShoot.model = 0;
+        }
 	}
 }

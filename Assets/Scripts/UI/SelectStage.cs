@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SelectStage : MonoBehaviour {
 
+    public GameObject SelectStageUI;
+
     public static bool trigger;
     public GameObject Player;
     Vector3 backPosition;
@@ -20,6 +22,12 @@ public class SelectStage : MonoBehaviour {
 
     void FixedUpdate()
     {
+        if (PlayerShoot.model == 4 && transform.position.z > 6f)
+        {
+            SelectStageUI.SetActive(true);
+            PlayerShoot.model = 5;
+        }
+
         if (PlayerShoot.model == 0)
         {
             if (trigger)
@@ -31,6 +39,12 @@ public class SelectStage : MonoBehaviour {
             {
                 transform.position = Vector3.Lerp(transform.position, backPosition, 5f * Time.deltaTime);
             }
+        }
+        else if (PlayerShoot.model == 6)
+        {
+            Rigidbody rg3d = GetComponent<Rigidbody>();
+            rg3d.velocity = new Vector3(0, 0, 0);
+            PlayerShoot.model = 0;
         }
     }
 }

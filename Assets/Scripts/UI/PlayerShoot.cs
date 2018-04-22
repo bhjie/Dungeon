@@ -53,14 +53,16 @@ public class PlayerShoot : MonoBehaviour {
         else if(model == 1 && prepare)
         {
             rg3d.angularVelocity = Vector3.zero;
-            rg3d.velocity = new Vector3(29, -25.5f, 14);
+            rg3d.velocity = new Vector3(58f, -59f, 23f);
             model = 4;
+            prepare = false;
         }
         else if(model == 2 && prepare)
         {
             rg3d.angularVelocity = Vector3.zero;
-            rg3d.velocity = new Vector3(29, -15f, 14);
+            rg3d.velocity = new Vector3(58f, -31.5f, 27.5f);
             model = 4;
+            prepare = false;
         }
 	}
 
