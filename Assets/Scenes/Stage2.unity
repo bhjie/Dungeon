@@ -458,6 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextStage: Stage3
+  FinishUI: {fileID: 2066502625}
 --- !u!4 &762080803 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4422730413776244, guid: b3cbbcb0e63c226408db2da0f160bcae,
@@ -1317,6 +1318,11 @@ Prefab:
 --- !u!1 &2066502624 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1393321817976278, guid: e7dc3584fa30d2d419a64457546b5756,
+    type: 2}
+  m_PrefabInternal: {fileID: 2066502623}
+--- !u!1 &2066502625 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1671108553626022, guid: e7dc3584fa30d2d419a64457546b5756,
     type: 2}
   m_PrefabInternal: {fileID: 2066502623}
 --- !u!1001 &2108509031

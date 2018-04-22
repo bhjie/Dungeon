@@ -46,6 +46,9 @@ public class EscMenu : MonoBehaviour {
                 GameManage.PauseGame();
                 pausemask.SetActive(true);
                 selection = 1;
+                resumetext.color = Color.red;
+                restarttext.color = Color.black;
+                titletext.color = Color.black;
             }
         }
 

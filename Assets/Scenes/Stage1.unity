@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.35651118, g: 0.36301118, b: 0.37290516, a: 1}
+  m_IndirectSpecularColor: {r: 0.33100164, g: 0.3344374, b: 0.3480351, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -394,9 +394,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114957271020450894, guid: b3cbbcb0e63c226408db2da0f160bcae,
         type: 2}
-      propertyPath: NextStage
-      value: Stage2
-      objectReference: {fileID: 0}
+      propertyPath: FinishUI
+      value: 
+      objectReference: {fileID: 1582989032}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3cbbcb0e63c226408db2da0f160bcae, type: 2}
   m_IsPrefabParent: 0
@@ -767,6 +767,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1039401740}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1582989032 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1671108553626022, guid: e7dc3584fa30d2d419a64457546b5756,
+    type: 2}
+  m_PrefabInternal: {fileID: 652504928}
 --- !u!1 &1640522940
 GameObject:
   m_ObjectHideFlags: 0
