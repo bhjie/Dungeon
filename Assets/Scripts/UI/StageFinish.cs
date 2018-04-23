@@ -73,7 +73,7 @@ public class StageFinish : MonoBehaviour {
             }
         }
 
-        if (timeCount > 0.3f && (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && IfFinish)
+        if (timeCount > 0.3f && (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && GameManage.IfFinish)
         {
             if (selection == 1)
             {
