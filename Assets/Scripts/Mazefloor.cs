@@ -7,13 +7,12 @@ public class Mazefloor : MonoBehaviour {
     public GameObject[] movefloor;
     public float delay=0.5f;
     private int appear = 0;     //接触这个平面的时候将变为活动状态，离开时变为静止状态
-    private float timer = 0f;   //计时器，用来延迟下落
+       //计时器，用来延迟下落
     private int locking = 0;     //在这个平面激活后只要还在这个平面上就不会发生其他滑动效果
-    private int outlock = 0;
-    private Mazemoving bri;
+
     // Use this for initialization
     void Start () {
-        bri = this.gameObject.GetComponent<Mazemoving>();
+
 
 	}
 	
@@ -48,7 +47,6 @@ public class Mazefloor : MonoBehaviour {
             appear = 1;
             if (locking==0)
                 Emerge();
-            outlock = 1;
            
         }
     }
@@ -65,9 +63,7 @@ public class Mazefloor : MonoBehaviour {
         if (collision.gameObject.CompareTag("Player"))
         {
             appear = 0;
-            timer = 0f;
             StartCoroutine(MyMethod());
-            outlock = 0;
         }
     }
     IEnumerator MyMethod()
