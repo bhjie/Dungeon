@@ -8,6 +8,9 @@ public class Elevator : MonoBehaviour {
     public Vector3 point_2;
     public GameObject door1;
     public GameObject door2;
+    public GameObject minmap;
+
+
     public float up;
     private float dir = 1;
     private int open = 0;
@@ -70,6 +73,7 @@ public class Elevator : MonoBehaviour {
 
             StartCoroutine(MyMethod());
 
+            
         }
     }
 
