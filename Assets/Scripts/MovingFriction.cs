@@ -16,7 +16,7 @@ public class MovingFriction : MonoBehaviour {
 	
 
 	void FixedUpdate () {
-        if (player == null)
+        if (player == null || PlayerRg3d == null)
         {
             player = GameObject.Find("Player");
             PlayerRg3d = player.GetComponent<Rigidbody>();

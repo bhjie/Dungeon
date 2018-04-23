@@ -17,7 +17,7 @@ public class Tp : MonoBehaviour {
                 Rigidbody rg3d = other.gameObject.GetComponent<Rigidbody>();
                 rg3d.velocity = new Vector3(0, 0, 0);
                 rg3d.constraints = RigidbodyConstraints.FreezePosition;
-                StageFinish.IfFinish = true;
+                GameManage.IfFinish = true;
                 FinishUI.SetActive(true);
             }
             else if (GameManage.GameModel == 1)

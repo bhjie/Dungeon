@@ -22,18 +22,18 @@ public class ItemManage : MonoBehaviour {
         
     }
 
-    #region ItemOfStage6
-    public static bool healthbox_Stage6_no1 = true;
+    #region ItemOfStage5
+    public static bool healthbox_Stage5_no1 = true;
     #endregion
-    public static void LoadItemStage6()
+    public static void LoadItemStage5()
     {
-        if (healthbox_Stage6_no1 || PassOrReStart)
+        if (healthbox_Stage5_no1 || PassOrReStart)
         {
-            healthbox_Stage6_no1 = true;
+            healthbox_Stage5_no1 = true;
             Object HealthBox = Resources.Load("Perfabs/HealthBox", typeof(GameObject));
             GameObject healthbox = Instantiate(HealthBox) as GameObject;
             healthbox.transform.position = new Vector3(-30f, 7.5f, 1f);
-            healthbox.name = "healthbox_Stage6_no1";
+            healthbox.name = "healthbox_Stage5_no1";
         }
     }
 

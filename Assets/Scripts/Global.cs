@@ -15,9 +15,9 @@ public class Global : MonoBehaviour {
             {
                 ItemManage.LoadItemStage4();
             }
-            if (SceneManager.GetActiveScene().name == "Stage6")
+            if (SceneManager.GetActiveScene().name == "Stage5")
             {
-                ItemManage.LoadItemStage6();
+                ItemManage.LoadItemStage5();
             }
         }
     }

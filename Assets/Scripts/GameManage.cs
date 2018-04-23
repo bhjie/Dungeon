@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManage : MonoBehaviour {
     public static bool IsPause = false;
+    public static bool IfFinish = false;
     public static int GameModel = 1;
 
 	public static void PauseGame()

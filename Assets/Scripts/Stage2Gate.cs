@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Stage2Gate : MonoBehaviour {
 
+    bool flag = true;
+
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (flag && other.gameObject.CompareTag("Player"))
         {
+            flag = false;
             Rigidbody rig;
 
             GameObject gate = GameObject.Find("Bridge2");

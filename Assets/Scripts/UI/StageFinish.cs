@@ -10,7 +10,7 @@ public class StageFinish : MonoBehaviour {
     public Text PlayAgainText;
     public Text TitleText;
 
-    public static bool IfFinish;
+    
 
     private float timeCount;
     private int selection;
@@ -18,7 +18,7 @@ public class StageFinish : MonoBehaviour {
 
     void Start ()
     {
-        IfFinish = false;
+        GameManage.IfFinish = false;
         timeCount = 0f;
         selection = 2;
         congratulationsTextLock = true;
@@ -26,7 +26,7 @@ public class StageFinish : MonoBehaviour {
 	
 	void Update ()
     {
-        if (IfFinish && congratulationsTextLock)
+        if (GameManage.IfFinish && congratulationsTextLock)
         {
             CongratulationsText.rectTransform.localScale = CongratulationsText.rectTransform.localScale * 1.1f;
             if(CongratulationsText.rectTransform.localScale.x > 1.5)
@@ -37,7 +37,7 @@ public class StageFinish : MonoBehaviour {
 
         timeCount = timeCount + Time.deltaTime;
 
-        if (timeCount > 0.3f && IfFinish)
+        if (timeCount > 0.3f && GameManage.IfFinish)
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
@@ -73,16 +73,16 @@ public class StageFinish : MonoBehaviour {
             }
         }
 
-        if (timeCount > 0.3f && (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && IfFinish)
+        if (timeCount > 0.3f && (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && GameManage.IfFinish)
         {
             if (selection == 1)
             {
-                IfFinish = false;
+                GameManage.IfFinish = false;
                 GameManage.RestartGame();
             }
             else if (selection == 2)
             {
-                IfFinish = false;
+                GameManage.IfFinish = false;
                 SceneManager.LoadSceneAsync("StartMenu");
             }
         }

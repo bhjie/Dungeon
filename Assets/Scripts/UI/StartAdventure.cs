@@ -26,6 +26,7 @@ public class StartAdventure : MonoBehaviour {
             GameManage.GameModel = 1;
             SceneManager.LoadSceneAsync("Stage1");
             PlayerShoot.model = 5;
+            HealthManage.PlayerHealth = HealthManage.BeginningHealth;
         }
 
         if (PlayerShoot.model == 0)
