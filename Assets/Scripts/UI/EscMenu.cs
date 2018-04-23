@@ -30,93 +30,96 @@ public class EscMenu : MonoBehaviour {
 	void Update ()
     {
         timeCount = timeCount + Time.deltaTime;
-		if(Input.GetKey(KeyCode.Escape) && HealthManage.LiveOrNot && timeCount > 0.3f)
+        if(!GameManage.IfFinish)
         {
-            if(GameManage.IsPause)
+            if (Input.GetKey(KeyCode.Escape) && HealthManage.LiveOrNot && timeCount > 0.3f)
             {
-                timeCount = 0;
-                GameManage.IsPause = false;
-                GameManage.ResumeGame();
-                pausemask.SetActive(false);
-            }
-            else
-            {
-                timeCount = 0;
-                GameManage.IsPause = true;
-                GameManage.PauseGame();
-                pausemask.SetActive(true);
-                selection = 1;
-                resumetext.color = Color.red;
-                restarttext.color = Color.black;
-                titletext.color = Color.black;
-            }
-        }
-
-        if (timeCount > 0.3f && GameManage.IsPause)
-        {
-            if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-            {
-                timeCount = 0;
-                if(selection == 1)
+                if (GameManage.IsPause)
                 {
-                    selection = 3;
-                    resumetext.color = Color.black;
-                    titletext.color = Color.red;
+                    timeCount = 0;
+                    GameManage.IsPause = false;
+                    GameManage.ResumeGame();
+                    pausemask.SetActive(false);
                 }
-                else if(selection == 2)
+                else
                 {
+                    timeCount = 0;
+                    GameManage.IsPause = true;
+                    GameManage.PauseGame();
+                    pausemask.SetActive(true);
                     selection = 1;
-                    restarttext.color = Color.black;
                     resumetext.color = Color.red;
-                }
-                else if(selection == 3)
-                {
-                    selection = 2;
+                    restarttext.color = Color.black;
                     titletext.color = Color.black;
-                    restarttext.color = Color.red;
                 }
             }
-            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+
+            if (timeCount > 0.3f && GameManage.IsPause)
             {
-                timeCount = 0;
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+                {
+                    timeCount = 0;
+                    if (selection == 1)
+                    {
+                        selection = 3;
+                        resumetext.color = Color.black;
+                        titletext.color = Color.red;
+                    }
+                    else if (selection == 2)
+                    {
+                        selection = 1;
+                        restarttext.color = Color.black;
+                        resumetext.color = Color.red;
+                    }
+                    else if (selection == 3)
+                    {
+                        selection = 2;
+                        titletext.color = Color.black;
+                        restarttext.color = Color.red;
+                    }
+                }
+                else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+                {
+                    timeCount = 0;
+                    if (selection == 1)
+                    {
+                        selection = 2;
+                        resumetext.color = Color.black;
+                        restarttext.color = Color.red;
+                    }
+                    else if (selection == 2)
+                    {
+                        selection = 3;
+                        restarttext.color = Color.black;
+                        titletext.color = Color.red;
+                    }
+                    else if (selection == 3)
+                    {
+                        selection = 1;
+                        titletext.color = Color.black;
+                        resumetext.color = Color.red;
+                    }
+                }
+            }
+
+            if ((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && GameManage.IsPause)
+            {
                 if (selection == 1)
                 {
-                    selection = 2;
-                    resumetext.color = Color.black;
-                    restarttext.color = Color.red;
+                    GameManage.IsPause = false;
+                    GameManage.ResumeGame();
+                    pausemask.SetActive(false);
                 }
                 else if (selection == 2)
                 {
-                    selection = 3;
-                    restarttext.color = Color.black;
-                    titletext.color = Color.red;
+                    GameManage.IsPause = false;
+                    GameManage.RestartGame();
                 }
                 else if (selection == 3)
                 {
-                    selection = 1;
-                    titletext.color = Color.black;
-                    resumetext.color = Color.red;
+                    GameManage.IsPause = false;
+                    SceneManager.LoadSceneAsync("StartMenu");
                 }
-            }
-        }
-
-        if((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && GameManage.IsPause)
-        {
-            if(selection == 1)
-            {
-                GameManage.IsPause = false;
-                GameManage.ResumeGame();
-                pausemask.SetActive(false);
-            }
-            else if(selection == 2)
-            {
-                GameManage.IsPause = false;
-                GameManage.RestartGame();
-            }
-            else if(selection == 3)
-            {
-                GameManage.IsPause = false;
-                SceneManager.LoadSceneAsync("StartMenu");
             }
         }
 	}
