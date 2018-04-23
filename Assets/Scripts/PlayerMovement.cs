@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
             if (HealthManage.PlayerHealth == 0)
             {
                 SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-                HealthManage.PlayerHealth = HealthManage.BeginningHealth;
+                HealthManage.PlayerHealth = 1;
             }
             else
             {

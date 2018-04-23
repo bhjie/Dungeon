@@ -56,6 +56,8 @@ public class SelectUI : MonoBehaviour {
         {
             stagenames[i] = "Stage" + i + "Pic";
         }
+
+        text4.text = "STAGE-" + numberOfStages;
 	}
 	
 
@@ -266,6 +268,7 @@ public class SelectUI : MonoBehaviour {
             PlayerShoot.model = 7;
             string NextStage = "Stage" + nowStageNum;
             SceneManager.LoadSceneAsync(NextStage);
+            HealthManage.PlayerHealth = 1;
         }
 	}
 }

@@ -15,9 +15,9 @@ public class AddHealth : MonoBehaviour {
                     ItemManage.healthbox_Stage4 = false;
                     break;
                 }
-            case "healthbox_Stage6_no1":
+            case "healthbox_Stage5_no1":
                 {
-                    ItemManage.healthbox_Stage6_no1 = false;
+                    ItemManage.healthbox_Stage5_no1 = false;
                     break;
                 }
         }
