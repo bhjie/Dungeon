@@ -14,8 +14,8 @@ public class StartMenu : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-        float num = RenderSettings.skybox.GetFloat("_Rotation");
-        RenderSettings.skybox.SetFloat("_Rotation", num + 0.05f);
+        //float num = RenderSettings.skybox.GetFloat("_Rotation");
+        //RenderSettings.skybox.SetFloat("_Rotation", num + 0.05f);
 
         timeCount = timeCount + Time.deltaTime;
         if(timeCount > 0.5f)
