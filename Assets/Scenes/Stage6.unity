@@ -4955,7 +4955,7 @@ MonoBehaviour:
   point_1: {x: -20, y: 5, z: 20}
   point_2: {x: -20, y: 20, z: 20}
   smoothing: 2
-  delay: 2
+  delay: 1
 --- !u!4 &823260560 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -10251,7 +10251,7 @@ MonoBehaviour:
   point_1: {x: 20, y: 5, z: -20}
   point_2: {x: 20, y: 20, z: -20}
   smoothing: 2
-  delay: 2
+  delay: 1
 --- !u!4 &1467942222 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4286069599440100, guid: b8cd652170de97e4db7b1d7bf9f76fd2,
@@ -10761,7 +10761,7 @@ MonoBehaviour:
   point_1: {x: -20, y: 5, z: -20}
   point_2: {x: -20, y: 20, z: -20}
   smoothing: 2
-  delay: 2
+  delay: 1
 --- !u!1 &1575474590
 GameObject:
   m_ObjectHideFlags: 0
@@ -12214,7 +12214,7 @@ GameObject:
   - component: {fileID: 1829370222}
   - component: {fileID: 1829370221}
   - component: {fileID: 1829370220}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Quad
   m_TagString: GameOver
   m_Icon: {fileID: 0}
@@ -14758,7 +14758,7 @@ MonoBehaviour:
   point_1: {x: 20, y: 5, z: 20}
   point_2: {x: 20, y: 20, z: 20}
   smoothing: 2
-  delay: 2
+  delay: 1
 --- !u!1 &2028743144 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297258104534010, guid: b8cd652170de97e4db7b1d7bf9f76fd2,

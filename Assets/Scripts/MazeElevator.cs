@@ -19,20 +19,20 @@ public class MazeElevator : MonoBehaviour {
 	void FixedUpdate () {
 		if (open==1 && dir==1)
         {
-            Vector3 vec = point_1;
+            Vector3 vec = point_2;
             transform.position = Vector3.Lerp(transform.position, vec, smoothing * Time.deltaTime);
         }
         if (open==1 && dir==0)
         {
-            Vector3 vec = point_2;
+            Vector3 vec = point_1;
             transform.position = Vector3.Lerp(transform.position, vec, smoothing * Time.deltaTime);
         }
-        if (dir==1 && transform.position==point_1 && open==1)
+        if (dir==1 && transform.position==point_2 && open==1)
         {
             open = 0;
             dir = 1 - dir;
         }
-        if (dir == 0 && transform.position == point_2 && open==1)
+        if (dir == 0 && transform.position == point_1 && open==1)
         {
             open = 0;
             dir = 1 - dir;
@@ -48,10 +48,7 @@ public class MazeElevator : MonoBehaviour {
         }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        open = 1;
-    }
+    
 
     IEnumerator MyMethod()
     {
