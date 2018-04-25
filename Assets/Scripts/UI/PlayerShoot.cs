@@ -68,9 +68,10 @@ public class PlayerShoot : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!collision.gameObject.CompareTag("Ground"))
+        if(!collision.gameObject.CompareTag("Ground") && model == 4)
         {
-            rg3d.velocity = new Vector3(rg3d.velocity.x, rg3d.velocity.y, -rg3d.velocity.z);
+            rg3d.velocity = new Vector3(rg3d.velocity.x / 2f, rg3d.velocity.y / 3f, -rg3d.velocity.z / 5f);
+            rg3d.useGravity = true;
         }
     }
 }

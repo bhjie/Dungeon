@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour {
 
-    float timeCount;
-    bool timeLock;
+    private float timeCount;
+    private AudioSource sound;
 
 	void Start () {
         timeCount = 0;
-        timeLock = true;
+        sound = GetComponent<AudioSource>();
 	}
 
 	void FixedUpdate () {
@@ -18,17 +18,13 @@ public class StartMenu : MonoBehaviour {
         //RenderSettings.skybox.SetFloat("_Rotation", num + 0.05f);
 
         timeCount = timeCount + Time.deltaTime;
-        if(timeCount > 0.5f)
-        {
-            timeLock = true;
-            timeCount = 0;
-        }
 
-        if(timeLock)
+        if(timeCount > 0.5f)
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
-                timeLock = false;
+                timeCount = 0;
+                sound.Play();
                 if (StartAdventure.trigger)
                 {
                     StartAdventure.trigger = false;
@@ -47,7 +43,8 @@ public class StartMenu : MonoBehaviour {
             }
             else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
-                timeLock = false;
+                timeCount = 0;
+                sound.Play();
                 if (StartAdventure.trigger)
                 {
                     StartAdventure.trigger = false;
@@ -66,7 +63,7 @@ public class StartMenu : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space))
+        if ((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && timeCount > 0.2f)
         {
             if(QuitGame.trigger)
             {
