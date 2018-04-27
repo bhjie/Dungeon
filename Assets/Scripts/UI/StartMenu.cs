@@ -5,16 +5,23 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour {
 
+    public GameObject confirm;
+
     private float timeCount;
     private AudioSource sound;
+    private float num;
+    private AudioSource confirmsound;
 
-	void Start () {
+    void Start () {
         timeCount = 0;
         sound = GetComponent<AudioSource>();
-	}
+        confirmsound = confirm.GetComponent<AudioSource>(); 
+        num = RenderSettings.skybox.GetFloat("_Rotation");
+        RenderSettings.skybox.SetFloat("_Rotation", 0);
+    }
 
-	void FixedUpdate () {
-        //float num = RenderSettings.skybox.GetFloat("_Rotation");
+    void FixedUpdate () {
+        
         //RenderSettings.skybox.SetFloat("_Rotation", num + 0.05f);
 
         timeCount = timeCount + Time.deltaTime;
@@ -67,15 +74,18 @@ public class StartMenu : MonoBehaviour {
         {
             if(QuitGame.trigger)
             {
+                
                 Application.Quit();
             }
             else if(StartAdventure.trigger)
             {
+                confirmsound.Play();
                 PlayerShoot.model = 1;
                 StartAdventure.trigger = false;
             }
             else if(SelectStage.trigger)
             {
+                confirmsound.Play();
                 PlayerShoot.model = 2;
                 SelectStage.trigger = false;
             }

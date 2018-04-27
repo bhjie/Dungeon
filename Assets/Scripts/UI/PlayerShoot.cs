@@ -10,13 +10,15 @@ public class PlayerShoot : MonoBehaviour {
     Rigidbody rg3d;
 
     public static int model;
-    bool prepare;
+    private bool prepare;
+    private AudioSource sound;
 
-	void Start () {
+    void Start () {
         model = 0;
         prepare = false;
         rg3d = GetComponent<Rigidbody>();
-	}
+        sound = GetComponent<AudioSource>();
+    }
 	
 	void FixedUpdate ()
     {
@@ -68,10 +70,15 @@ public class PlayerShoot : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!collision.gameObject.CompareTag("Ground") && model == 4)
+        sound.Play();
+        if (!collision.gameObject.CompareTag("Ground") && model == 4)
         {
             rg3d.velocity = new Vector3(rg3d.velocity.x / 2f, rg3d.velocity.y / 3f, -rg3d.velocity.z / 5f);
             rg3d.useGravity = true;
+        }
+        else if (collision.gameObject.CompareTag("Ground") && model == 4)
+        {
+            
         }
     }
 }

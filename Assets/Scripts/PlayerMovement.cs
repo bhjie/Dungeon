@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private static Rigidbody rg3d;
     private Vector3 movement;
     private int GroundType;
+    private AudioSource Hitsound;
     static Vector3 FrozenSpeed;
     static Vector3 FrozenAngularSpeed;
 
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         GroundType = 0;
         movement = new Vector3(0f, 0f, 0f); 
         rg3d = GetComponent<Rigidbody>();
+        Hitsound = GetComponent<AudioSource>();
     }
 
 
@@ -113,6 +115,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if(other.relativeVelocity.y * other.relativeVelocity.y > 8)
+        {
+            Hitsound.Play();
+        }
         if (other.gameObject.CompareTag("Ground"))
         {
             if (other.relativeVelocity.y > 10.5f || other.relativeVelocity.y < -10.5f)

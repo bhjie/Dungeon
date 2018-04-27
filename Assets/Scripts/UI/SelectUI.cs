@@ -264,7 +264,9 @@ public class SelectUI : MonoBehaviour {
             rg3d.velocity = new Vector3(0, 0, 0);
             rg3d.useGravity = false;
             Player.transform.position = new Vector3(-11, 0, 0);
-
+            flagLeftToRight = false;
+            flagRightToLeft = false;
+            timeLock = true;
             this.gameObject.SetActive(false);
         }
         else if((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && PlayerShoot.model == 5)
