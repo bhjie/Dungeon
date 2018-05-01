@@ -15,6 +15,8 @@ public class StageFinish : MonoBehaviour {
     private float timeCount;
     private int selection;
     private bool congratulationsTextLock;
+    private AudioSource sound;
+
 
     void Start ()
     {
@@ -22,6 +24,7 @@ public class StageFinish : MonoBehaviour {
         timeCount = 0f;
         selection = 2;
         congratulationsTextLock = true;
+        sound = GetComponent<AudioSource>();
     }
 	
 	void Update ()
@@ -41,6 +44,7 @@ public class StageFinish : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
+                sound.Play();
                 timeCount = 0;
                 if (selection == 1)
                 {
@@ -57,6 +61,7 @@ public class StageFinish : MonoBehaviour {
             }
             else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
+                sound.Play();
                 timeCount = 0;
                 if (selection == 1)
                 {
@@ -82,6 +87,8 @@ public class StageFinish : MonoBehaviour {
             }
             else if (selection == 2)
             {
+                GameObject bgm = GameObject.Find("BGM");
+                Destroy(bgm);
                 GameManage.IfFinish = false;
                 SceneManager.LoadSceneAsync("StartMenu");
             }

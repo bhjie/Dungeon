@@ -37,6 +37,7 @@ public class SelectUI : MonoBehaviour {
 
     private Vector3 origin;
     private float smooth;
+    private AudioSource sound;
 
     void Start ()
     {
@@ -50,6 +51,7 @@ public class SelectUI : MonoBehaviour {
 
         origin = new Vector3(1, 1, 1);
         smooth = 6f;
+        sound = GetComponent<AudioSource>();
 
         stagenames = new string[numberOfStages + 1];
         for(int i=1; i <= numberOfStages; i++)
@@ -67,6 +69,7 @@ public class SelectUI : MonoBehaviour {
         {
             if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
+                sound.Play();
                 timeLock = false;
                 nowStageNum++;
                 if (nowStageNum > numberOfStages)
@@ -130,7 +133,7 @@ public class SelectUI : MonoBehaviour {
                 }
 
                 RectTransform rect = OutView.GetComponent<RectTransform>();
-                rect.localPosition = new Vector3(1000, 0, 0);
+                rect.localPosition = new Vector3(1200, 0, 0);
                 flagRightToLeft = true;
                 nowViewNum++;
                 if (nowViewNum > 4)
@@ -140,6 +143,7 @@ public class SelectUI : MonoBehaviour {
             }
             else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
+                sound.Play();
                 timeLock = false;
                 nowStageNum--;
                 if (nowStageNum == 0)
@@ -202,7 +206,7 @@ public class SelectUI : MonoBehaviour {
                 }
 
                 RectTransform rect = OutView.GetComponent<RectTransform>();
-                rect.localPosition = new Vector3(-1000, 0, 0);
+                rect.localPosition = new Vector3(-1200, 0, 0);
                 flagLeftToRight = true;
                 nowViewNum--;
                 if (nowViewNum == 0)
@@ -221,7 +225,7 @@ public class SelectUI : MonoBehaviour {
             rect.localPosition = Vector3.Lerp(rect.localPosition, new Vector3(0, 30, 0), smooth * Time.deltaTime);
             rect.localScale = origin * (1f + rect.localPosition.x / 1200f);
             rect = RightView.GetComponent<RectTransform>();
-            rect.localPosition = Vector3.Lerp(rect.localPosition, new Vector3(1000, 30, 0), smooth * Time.deltaTime);
+            rect.localPosition = Vector3.Lerp(rect.localPosition, new Vector3(1200, 30, 0), smooth * Time.deltaTime);
             rect = OutView.GetComponent<RectTransform>();
             rect.localPosition = Vector3.Lerp(rect.localPosition, new Vector3(-600, 30, 0), smooth * Time.deltaTime);
             if(rect.localPosition.x + 600 > -2f)
@@ -236,7 +240,7 @@ public class SelectUI : MonoBehaviour {
             rect.localPosition = Vector3.Lerp(rect.localPosition, new Vector3(-600, 30, 0), smooth * Time.deltaTime);
             rect.localScale = origin * (1f + rect.localPosition.x / 1200f);
             rect = LeftView.GetComponent<RectTransform>();
-            rect.localPosition = Vector3.Lerp(rect.localPosition, new Vector3(-1000, 30, 0), smooth * Time.deltaTime);
+            rect.localPosition = Vector3.Lerp(rect.localPosition, new Vector3(-1200, 30, 0), smooth * Time.deltaTime);
             rect = RightView.GetComponent<RectTransform>();
             rect.localPosition = Vector3.Lerp(rect.localPosition, new Vector3(0, 30, 0), smooth * Time.deltaTime);
             rect.localScale = origin * (1f - rect.localPosition.x / 1200f);
@@ -258,8 +262,11 @@ public class SelectUI : MonoBehaviour {
             Rigidbody rg3d = Player.GetComponent<Rigidbody>();
             rg3d.angularVelocity = new Vector3(1, 1, 1);
             rg3d.velocity = new Vector3(0, 0, 0);
+            rg3d.useGravity = false;
             Player.transform.position = new Vector3(-11, 0, 0);
-
+            flagLeftToRight = false;
+            flagRightToLeft = false;
+            timeLock = true;
             this.gameObject.SetActive(false);
         }
         else if((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && PlayerShoot.model == 5)

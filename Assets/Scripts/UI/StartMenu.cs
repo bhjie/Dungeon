@@ -5,30 +5,33 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour {
 
-    float timeCount;
-    bool timeLock;
+    public GameObject confirm;
 
-	void Start () {
+    private float timeCount;
+    private AudioSource sound;
+    private float num;
+    private AudioSource confirmsound;
+
+    void Start () {
         timeCount = 0;
-        timeLock = true;
-	}
+        sound = GetComponent<AudioSource>();
+        confirmsound = confirm.GetComponent<AudioSource>(); 
+        num = RenderSettings.skybox.GetFloat("_Rotation");
+        RenderSettings.skybox.SetFloat("_Rotation", 0);
+    }
 
-	void FixedUpdate () {
-        float num = RenderSettings.skybox.GetFloat("_Rotation");
-        RenderSettings.skybox.SetFloat("_Rotation", num + 0.05f);
+    void FixedUpdate () {
+        
+        //RenderSettings.skybox.SetFloat("_Rotation", num + 0.05f);
 
         timeCount = timeCount + Time.deltaTime;
-        if(timeCount > 0.5f)
-        {
-            timeLock = true;
-            timeCount = 0;
-        }
 
-        if(timeLock)
+        if(timeCount > 0.5f)
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
-                timeLock = false;
+                timeCount = 0;
+                sound.Play();
                 if (StartAdventure.trigger)
                 {
                     StartAdventure.trigger = false;
@@ -47,7 +50,8 @@ public class StartMenu : MonoBehaviour {
             }
             else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
-                timeLock = false;
+                timeCount = 0;
+                sound.Play();
                 if (StartAdventure.trigger)
                 {
                     StartAdventure.trigger = false;
@@ -66,19 +70,22 @@ public class StartMenu : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space))
+        if ((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Space)) && timeCount > 0.2f)
         {
             if(QuitGame.trigger)
             {
+                
                 Application.Quit();
             }
             else if(StartAdventure.trigger)
             {
+                confirmsound.Play();
                 PlayerShoot.model = 1;
                 StartAdventure.trigger = false;
             }
             else if(SelectStage.trigger)
             {
+                confirmsound.Play();
                 PlayerShoot.model = 2;
                 SelectStage.trigger = false;
             }

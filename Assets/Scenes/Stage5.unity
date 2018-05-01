@@ -1120,6 +1120,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 54283281627962052, guid: 094f3d7b387ca414599954ba14d22012,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 122
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114563205849216828, guid: 094f3d7b387ca414599954ba14d22012, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 094f3d7b387ca414599954ba14d22012, type: 2}
@@ -1551,24 +1556,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68e981a360ef56849987f1d59d09e67f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &675326346 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1479560502268880, guid: 094f3d7b387ca414599954ba14d22012,
-    type: 2}
-  m_PrefabInternal: {fileID: 1507815666}
---- !u!114 &675326347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 675326346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838234857d8fb13499409ae60f95a7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hitname: 
-  health: 2
 --- !u!1001 &684213996
 Prefab:
   m_ObjectHideFlags: 0
@@ -3100,24 +3087,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8cd652170de97e4db7b1d7bf9f76fd2, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1359215868 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1479560502268880, guid: 094f3d7b387ca414599954ba14d22012,
-    type: 2}
-  m_PrefabInternal: {fileID: 445754555}
---- !u!114 &1359215869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1359215868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838234857d8fb13499409ae60f95a7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hitname: 
-  health: 2
 --- !u!1 &1361246298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,6 +3201,11 @@ Prefab:
     - target: {fileID: 4311539791724010, guid: 094f3d7b387ca414599954ba14d22012, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 54283281627962052, guid: 094f3d7b387ca414599954ba14d22012,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 122
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114563205849216828, guid: 094f3d7b387ca414599954ba14d22012, type: 2}
@@ -3641,6 +3615,11 @@ Prefab:
         type: 2}
       propertyPath: m_Mass
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 54283281627962052, guid: 094f3d7b387ca414599954ba14d22012,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 122
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114563205849216828, guid: 094f3d7b387ca414599954ba14d22012, type: 2}
@@ -5175,24 +5154,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13b102f90ef2d9547b0b20dab65ee793, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2062651667 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1479560502268880, guid: 094f3d7b387ca414599954ba14d22012,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421298467}
---- !u!114 &2062651668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2062651667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838234857d8fb13499409ae60f95a7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hitname: 
-  health: 2
 --- !u!1001 &2081605362
 Prefab:
   m_ObjectHideFlags: 0

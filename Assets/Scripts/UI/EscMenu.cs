@@ -16,16 +16,18 @@ public class EscMenu : MonoBehaviour {
     private Text titletext;
 
     private float timeCount;
-    private int selection; 
+    private int selection;
+    private AudioSource sound;
 
-	void Start () {
+    void Start () {
         timeCount = 0;
         selection = 1;
         resumetext = resumeText.GetComponent<Text>();
         restarttext = restartText.GetComponent<Text>();
         titletext = titleText.GetComponent<Text>();
         resumetext.color = Color.red;
-	}
+        sound = GetComponent<AudioSource>();
+    }
 
 	void Update ()
     {
@@ -58,6 +60,7 @@ public class EscMenu : MonoBehaviour {
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
                 {
+                    sound.Play();
                     timeCount = 0;
                     if (selection == 1)
                     {
@@ -80,6 +83,7 @@ public class EscMenu : MonoBehaviour {
                 }
                 else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
                 {
+                    sound.Play();
                     timeCount = 0;
                     if (selection == 1)
                     {
@@ -117,6 +121,8 @@ public class EscMenu : MonoBehaviour {
                 }
                 else if (selection == 3)
                 {
+                    GameObject bgm = GameObject.Find("BGM");
+                    Destroy(bgm);
                     GameManage.IsPause = false;
                     SceneManager.LoadSceneAsync("StartMenu");
                 }
