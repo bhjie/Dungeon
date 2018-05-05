@@ -8,6 +8,7 @@ public class Init : MonoBehaviour {
 
 	void Start ()
     {
+        GameManage.RevivePoint = point;
         LoadBGM();
         LoadPlayer();
         if(GameManage.GameModel == 1)
@@ -19,6 +20,10 @@ public class Init : MonoBehaviour {
             if (SceneManager.GetActiveScene().name == "Stage5")
             {
                 ItemManage.LoadItemStage5();
+            }
+            if (SceneManager.GetActiveScene().name == "Stage6")
+            {
+                ItemManage.LoadItemStage6();
             }
         }
     }
