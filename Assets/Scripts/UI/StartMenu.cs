@@ -21,8 +21,8 @@ public class StartMenu : MonoBehaviour {
     }
 
     void FixedUpdate () {
-        
-        //RenderSettings.skybox.SetFloat("_Rotation", num + 0.05f);
+        num = RenderSettings.skybox.GetFloat("_Rotation");
+        RenderSettings.skybox.SetFloat("_Rotation", num + 0.05f);
 
         timeCount = timeCount + Time.deltaTime;
 
@@ -74,7 +74,7 @@ public class StartMenu : MonoBehaviour {
         {
             if(QuitGame.trigger)
             {
-                
+                RenderSettings.skybox.SetFloat("_Rotation", 0);
                 Application.Quit();
             }
             else if(StartAdventure.trigger)
