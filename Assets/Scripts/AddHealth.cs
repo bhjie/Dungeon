@@ -20,6 +20,11 @@ public class AddHealth : MonoBehaviour {
                     ItemManage.healthbox_Stage5_no1 = false;
                     break;
                 }
+            case "healthbox_Stage6_no1":
+                {
+                    ItemManage.healthbox_Stage6_no1 = false;
+                    break;
+                }
         }
 
         HealthManage.PlayerHealth++;

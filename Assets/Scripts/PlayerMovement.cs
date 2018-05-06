@@ -163,8 +163,23 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                ItemManage.PassOrReStart = false;
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+                if(SceneManager.GetActiveScene().name == "Stage6")
+                {
+                    HealthManage.LiveOrNot = true;
+                    ItemManage.PassOrReStart = false;
+                    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+                }
+                else
+                {
+                    transform.position = GameManage.RevivePoint;
+                    rg3d.velocity = Vector3.zero;
+                    rg3d.angularVelocity = Vector3.zero;
+                    HealthManage.LiveOrNot = true;
+                    ItemManage.PassOrReStart = false;
+                    tag = "Player";
+                    GroundType = 0;
+                }
+                
             }
         }
         else if(GameManage.GameModel == 2)
