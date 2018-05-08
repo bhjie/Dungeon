@@ -17,14 +17,18 @@ public class Elevator : MonoBehaviour {
     public float smoothing = 2f;
     public float delay = 2f;
     private float timer;
+    private int swapcamera = 0;
     private Vector3 vec;
     private Vector3 vec_2;
+
+    private SwapCamera came;
     // Use this for initialization
     void Start()
     {
         vec = point_1;
         vec_2 = point_2;
         timer = 0;
+        came = GetComponent<SwapCamera>();
     }
 
     // Update is called once per frame
@@ -78,21 +82,37 @@ public class Elevator : MonoBehaviour {
     }
 
 
-
     IEnumerator MyMethod()
     {
         yield return new WaitForSeconds(delay);
         open = 1;
+        if (swapcamera==0)
+        {
+            came.SwitchCamera();
+            swapcamera = 1;
+        }
+        
         if (dir ==1 && up==-1 || dir==0 && up==1)
         {
             yield return new WaitForSeconds((point_1-point_2).magnitude/smoothing);
+
             if (door1.GetComponent<Rotate>().state == 0)
             {
                 door1.GetComponent<Rotate>().StartRotate();
                 door2.GetComponent<Rotate>().StartRotate();
+                came.SwitchCameraBack();
+                swapcamera = 0;
             }
             
         }
-        
+        if (dir == 0 && up == -1 || dir == 1 && up == 1)
+        {
+            yield return new WaitForSeconds((point_1 - point_2).magnitude / smoothing);
+            if (swapcamera == 1)
+            {
+                came.SwitchCameraBack();
+                swapcamera = 0;
+            }
+        }
     }
 }
