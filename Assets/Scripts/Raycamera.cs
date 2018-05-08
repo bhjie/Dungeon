@@ -11,9 +11,7 @@ public class Raycamera : MonoBehaviour {
     // Use this for initialization
     void Start () {
         this.gameObject.SetActive(false);
-        //Player = GameObject.Find("Player");
-        //transform.position = Player.transform.position + dis;
-        //transform.forward = Player.transform.position - transform.position;
+        
     }
 	
 	// Update is called once per frame
