@@ -52,12 +52,14 @@ public class Elevator : MonoBehaviour {
         }
         if (dir == 1 && timer >= (vec_2 - vec).magnitude / smoothing && open == 1) 
         {
+            this.gameObject.tag = ("Ground");
             open = 0;
             dir = 1 - dir;
             timer = 0;
         }
         if (dir == 0 && timer >= (vec_2 - vec).magnitude / smoothing && open == 1)
         {
+            this.gameObject.tag = ("Ground");
             open = 0;
             dir = 1 - dir;
             timer = 0;
@@ -107,6 +109,7 @@ public class Elevator : MonoBehaviour {
                 door2.GetComponent<Rotate>().StartRotate();
                 came.SwitchCameraBack();
                 swapcamera = 0;
+                
             }
             
         }
