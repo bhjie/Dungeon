@@ -124,9 +124,7 @@ public class PlayerMovement : MonoBehaviour
             
             if (other.relativeVelocity.y > 10.5f || other.relativeVelocity.y < -10.5f)
             {
-                GameObject obj = GameObject.Find("Environment");
-                SwapCamera camera = obj.GetComponent<SwapCamera>();
-                camera.SwitchCameraBack();
+                
                 PlayerDie();
             }
             
@@ -134,9 +132,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("GameOver"))
         {
             
-            GameObject obj = GameObject.Find("Environment");
-            SwapCamera camera = obj.GetComponent<SwapCamera>();
-            camera.SwitchCameraBack();
+            
             PlayerDie();
         }
     }

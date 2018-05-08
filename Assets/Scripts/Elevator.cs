@@ -20,7 +20,6 @@ public class Elevator : MonoBehaviour {
     private int swapcamera = 0;
     private Vector3 vec;
     private Vector3 vec_2;
-
     private SwapCamera came;
     // Use this for initialization
     void Start()
@@ -34,7 +33,7 @@ public class Elevator : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+
         if (open == 1 && dir == 1)
         {
             vec = point_1;
@@ -63,6 +62,12 @@ public class Elevator : MonoBehaviour {
             dir = 1 - dir;
             timer = 0;
         }
+        if (!HealthManage.LiveOrNot)
+        {
+            came.SwitchCameraBack();
+            swapcamera = 0;
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
